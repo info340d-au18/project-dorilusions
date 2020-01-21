@@ -8,18 +8,32 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
+    line-height: 1.5rem;
 }
 
 img {
     width: 100%;
-    padding: 5%;
+    padding: 0 0 0 5%;
+    
+}
+h1 {
+    font-size: 3rem;
+    line-height: 1rem;
+}
+
+li {
+    margin-bottom: 1rem;
 }
 
 @media (min-width:992px) {
+    body {
+        width: 75%;
+    }
+    
     img {
-        width: 50%;
         float: right;
+        width: 40%;
     }
 }
 
