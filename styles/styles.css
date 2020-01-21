@@ -1,6 +1,25 @@
 /* Import font */
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Lato', sans-serif;
+    margin: 0 auto;
+    width: 85%;
 }
+
+img {
+    width: 100%;
+    padding: 5%;
+}
+
+@media (min-width:992px) {
+    img {
+        width: 50%;
+        float: right;
+    }
+}
+
