@@ -1,29 +1,44 @@
 /* Import font */
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Lato', sans-serif;
     margin: 0 auto;
     width: 90%;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
+    text-align: justify;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    text-align: center;
 }
 
 img {
     width: 100%;
-    padding: 0 0 0 5%;
+    padding: 0 0 5% 5%;
     
 }
 h1 {
     font-size: 3rem;
     line-height: 1rem;
+    color: rgb(89, 1, 124);
+}
+
+h2 {
+    color: rgb(117, 0, 163);
 }
 
 li {
     margin-bottom: 1rem;
+}
+
+.byline {
+    font-style: italic;
+    font-size: 90%;
 }
 
 @media (min-width:992px) {
