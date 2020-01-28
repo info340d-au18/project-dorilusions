@@ -9,6 +9,34 @@ body {
     text-align: justify;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
 section {
     margin-bottom: 2rem;
 }
@@ -20,8 +48,9 @@ footer {
 img {
     width: 100%;
     padding: 5%;
-    
+
 }
+
 h1 {
     font-size: 3rem;
     line-height: 2rem;
@@ -49,11 +78,10 @@ li {
     h1 {
         line-height: 1rem;
     }
-    
+
     img {
         float: right;
         width: 40%;
         padding: 0 0 5% 5%;
     }
 }
-
