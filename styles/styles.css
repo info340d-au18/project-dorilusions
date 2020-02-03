@@ -1,6 +1,11 @@
 /* Import font */
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+/*Booking Page Style Starts here*/
+
+
+/*Booking Page Style Ends here*/
+
 body {
     font-family: 'Lato', sans-serif;
     margin: 0 auto;
@@ -73,6 +78,17 @@ li {
     font-style: italic;
     font-size: 90%;
 }
+
+.logo {
+    background: url('../img/icon-purple.png');
+    padding: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+   
+
+}
+
 
 @media (min-width:992px) {
     body {

@@ -12,17 +12,32 @@
 <body>
     <nav>
         <ul>
+            <span class="logo" aria-label="search"></span>
             <li><a href="proposal.html">Project Proposal</a></li>
             <li><a href="booking.html">Booking</a></li>
         </ul>
     </nav>
 
     <main>
-
+        <h2>Book a Performance</h2>
+        <p>
+            We perform all over the Puget Sound area. Book us for your next event using this form!
+        </p>
+        <section class="booking-form">
+            <form action="/action_page.php">
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <label for="date">Event Date</label>
+                <input type="date" id="date" name="date" placeholder="Event Date">
+                <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                <textarea id="message" name="message" placeholder="message"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
     </main>
 
     <footer>
-
+        <p>&copy; Dorothy Lu & Aaron Zhao</p>
     </footer>
 </body>
 
