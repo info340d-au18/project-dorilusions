@@ -49,4 +49,12 @@ body {
 .banner {
     filter: brightness(50%);
 }
+
+.homeLogo {
+    height: 30px;
+}
+
+.vertAlign {
+    vertical-align: bottom;
+}
 /*General Styling Ends here*/
