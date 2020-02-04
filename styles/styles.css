@@ -1,7 +1,7 @@
 /* Import font */
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-/*Booking Page Style Starts here*/
+/*Booking Page Styling Starts here*/
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -31,8 +31,9 @@ input, textarea {
     background-color: #f2f2f2;
     padding: 20px;
   }
-/*Booking Page Style Ends here*/
+/*Booking Page Styling Ends here*/
 
+/*General Styling Starts here*/
 body {
     font-family: "Lato", sans-serif
 }
@@ -48,3 +49,4 @@ body {
 .banner {
     filter: brightness(50%);
 }
+/*General Styling Ends here*/
