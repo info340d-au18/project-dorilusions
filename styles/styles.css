@@ -34,11 +34,11 @@ input, textarea {
 /*Booking Page Style Ends here*/
 
 body {
-    font-family: "Lato", sans-serif
+    font-family: "Lato", sans-serif;
 }
 
-.mySlides {
-    display: none
+.w3-bar .w3-button {
+    padding: 16px;
 }
 
 .byline {
