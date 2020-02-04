@@ -1,46 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Taiko Kai</title>
+    <script src="js/index.js"></script>
+    <title>Home</title>
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="proposal.html">Project Proposal</a></li>
-            <li><a href="booking.html">Booking</a></li>
-        </ul>
-    </nav>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="navToggle()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+            <a href="booking.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Booking</a>
+            <a href="proposal.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Proposal</a>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
 
-    <main>
-        <section class="highlight-banner">
-            <h2>Minidoka Day Of Rememberance</h2>
-            <h3>Feburary 16</h3>
-            <button>Read More</button>
-        </section>
+    <!-- Navbar on small screens -->
+    <div id="nav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#upcomingPerformances" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Upcoming
+            Performances</a>
+        <a href="booking.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Booking</a>
+        <a href="proposal.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Proposal</a>
+    </div>
 
-        <section>
-            <h2>Upcoming Events</h2>
-        </section>
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+        <!-- Hero Img -->
+        <div class="w3-display-container w3-center">
+            <img id="banner" src="img/minidoka.jpg" style="width: 100%;" alt="Minidoka 2017">
+            <div class="w3-display-middle w3-container w3-text-white w3-padding-64 w3-hide-small">
+                <h1 class="w3-text-white">Sun, Feb 16 || UW Taiko Kai Presents</h1>
+                <h1 class="w3-jumbo w3-text-white">Minidoka Day of Rememberance</h1>
+                <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off"><a href="">LEARN MORE</a></button></h6>
+                <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off"><a href="#upcomingPerformances">MORE UPCOMING</a></button></h6>
+            </div>
+        </div>
 
-        <section class="event-box">
-            <h3>Nikkei Student Association Day Of Rememberance</h3>
-        </section>
+        <!-- Intro -->
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="intro">
+            <h2 class="w3-wide">WELCOME TO UW TAIKO KAI</h2>
+            <p class="w3-justify">Taiko Kai was founded in 2013 by the Matsudaira sisters, three UW students who wanted
+                to share Japanese culture with UW as well as the greater Seattle community. Since then, we have
+                performed at various campus events such as FIUTS's CulturalFest. We have also performed at noteworthy
+                events in the Seattle area like Redmond Lights and Sakura-Con.
 
-        <section class="event-box">
-            <h3>Taiwanese Overseas Student Association Carnival</h3>
-        </section>
+                Our club focuses on its members, helping them develop personal and team-based performance skills. Our
+                members learn about how to effectively move their bodies and perform for an audience. Our club also
+                builds connections between its members and the American Japanese community, working with other Taiko
+                groups and Japanese events.</p>
+        </div>
 
-        <section class="event-box">
-            <h3>Sakuracon</h3>
-        </section>
-    </main>
+        <!-- Upcoming performances -->
+        <div class="w3-black" id="upcomingPerformances">
+            <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+                <h2 class="w3-wide w3-center">UPCOMING PERFORMANCES</h2>
 
-    <footer>
+                <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                    <div class="w3-margin-bottom">
+                        <img src="img/taikokaispringconcert.jpg" alt="NSU Day Of Rememberance" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white w3-center">
+                            <p><b>NSU Day Of Rememberance</b></p>
+                            <p class="w3-opacity">Fri 27 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="w3-button w3-black w3-margin-bottom">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="w3-margin-bottom">
+                        <img src="img/tosatimeless.jpg" alt="Taiwanese Overseas Student Association event poster" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white w3-center">
+                            <p><b>TOSA Carnival</b></p>
+                            <p class="w3-opacity">Feburary 22nd 3-8PM</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="w3-button w3-black w3-margin-bottom">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="w3-margin-bottom">
+                        <img src="img/sakuracon2020.jpg" alt="Sakuracon" style="width:100%"
+                            class="w3-hover-opacity">
+                        <div class="w3-container w3-white w3-center">
+                            <p><b>Sakura-Con</b></p>
+                            <p class="w3-opacity">Sun 29 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="w3-button w3-black w3-margin-bottom">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Content -->
+    </div>
 
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <!-- Contact Taiko -->
+        <div class="w3-container w3-content" style="max-width:800px" id="contact">
+            <h2 class="w3-wide w3-center">CONTACT</h2>
+            <div class="w3-row w3-center  w3-padding-32">
+                <div class="w3-col w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker" style="width:30px"></i>Seattle, WA 98105 United States<br>
+                    <i class="fa fa-phone" style="width:30px"></i> Phone: 425-879-6802<br>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email: uwtaiko@gmail.com<br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/uwtaikokai/"></a>
+        <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/taikokai/"></a>
+        <a class="fa fa-youtube w3-hover-opacity" href="https://www.youtube.com/channel/UCfNit59pCLMfxQzRrVRrXTQ"></a>
+        </p>
     </footer>
 </body>
+
 </html>
