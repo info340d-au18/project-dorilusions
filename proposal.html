@@ -20,12 +20,8 @@
                 href="javascript:void(0)" onclick="navToggle()" title="Toggle Navigation Menu"><i
                     class="fa fa-bars"></i></a>
             <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
-            <a href="#upcomingPerformances" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Upcoming
-                Performances</a>
             <a href="booking.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Booking</a>
             <a href="proposal.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Proposal</a>
-            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
-                    class="fa fa-search"></i></a>
         </div>
     </div>
 
@@ -39,7 +35,7 @@
 
     <!-- Background img with linear gradient -->
     <div class="w3-display-container w3-center">
-        <img class="" id="proposalBanner" src="img/taikokaispringconcert.jpg" style="width: 100%;" alt="Taiko Spring Concert 2019">
+        <img class="banner" src="img/taikokaispringconcert.jpg" style="width: 100%;" alt="Taiko Spring Concert 2019">
         <div class="w3-display-middle w3-container w3-text-white w3-padding-64 w3-hide-small">
             <h1 class="w3-jumbo w3-text-white">PROJECT PROPOSAL</h1>
         </div>
@@ -47,7 +43,7 @@
 
     <main>
         <section>
-            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+            <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px" id="band">
                 <h2 class="w3-wide">TOPIC OVERVIEW</h2>
                 <p class="w3-justify">
                     Taiko Kai is the University of Washington's first Taiko ensemble, and was founded in 2013 by three
@@ -78,10 +74,10 @@
 
         <section>
             <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px" id="band">
-                <h2> POTENTIAL APPLICATIONS </h2>
-                <ul class="noBullet">
-                    <b>Event Management</b><br>
-                    <li class="w3-justify w3-margin-bottom">
+                <h2 class="w3-wide"> POTENTIAL APPLICATIONS </h2>
+                <div>
+                    <h4>Event Management</h4>
+                    <p class="w3-justify w3-margin-bottom">
                         One application of our website would be to simplify processes surrounding events and performances.
                         This includes functions such as booking performances, looking up upcoming events, and getting
                         connected with the club. UW Taiko Kai performs for both student as well as outside organizations.
@@ -96,9 +92,9 @@
                         events, and performances, primarily through a feed and embedded Google Calendar of events. All of
                         Taiko Kai's contact information and social media will be available for anyone else that feels the
                         need to contact the club.
-                    </li>
-                    <b>User Accounts & Data Storage</b><br>
-                    <li class="w3-justify w3-margin-bottom">
+                    </p>
+                    <h4>User Accounts & Data Storage</h4>
+                    <p class="w3-justify w3-margin-bottom">
                         A second possible application would be a personal portal for users. Users would be able to create
                         an account with their email to organize their information. The general public would be able to view
                         the performances they booked or plan to attend, as well as opt into a quarterly newsletter/email
@@ -108,35 +104,57 @@
                         files,
                         and make changes to website elements. All users would have access towards performance videos and
                         basic Taiko documentation.
-                    </li>
-                    <b>Cultural Education</b><br>
-                    <li class="w3-justify w3-margin-bottom">
+                    </p>
+                    <h4>Cultural Education</h4>
+                    <p class="w3-justify w3-margin-bottom">
                         UW Taiko Kai also aims to educate the general public about UW Taiko and its roots. Thus, a section
                         of
                         the webpage will be dedicated to the history of Taiko and UW Taiko Kai. This includes the history
                         and cultural significance of Taiko as a musical instrument in Japan, as well as how the performance
                         art spread to the United States. It will also talk about the history of UW Taiko Kai as an RSO, its
                         development, and its current status at UW.
-                    </li>
-                </ul>
+                    </p>
+                </div>
             </div>
             
         </section>
 
         <section>
-            <h2> Additional Resources </h2>
+            <div class="w3-black">
+                <div class="w3-container w3-content w3-padding-64 w3-center" style="max-width:800px">
+                    <h2 class="w3-wide">ADDITIONAL RESOURCES</h2>
 
-            <p>To learn more about Taiko's history, click <a
-                    href="https://www.taiko-center.co.jp/english/history_of_taiko.html">here</a>. </p>
-            <p> To learn more about Taiko in the U.S, click <a href="https://taikocommunityalliance.org/">here</a>.</p>
-            <p> To learn more about UW Taiko Kai, click <a
-                    href="https://huskylink.washington.edu/organization/taikokai">here</a>.
-            </p>
+                    <p>To learn more about Taiko's history, click <a
+                            href="https://www.taiko-center.co.jp/english/history_of_taiko.html">here</a>. </p>
+                    <p> To learn more about Taiko in the U.S, click <a href="https://taikocommunityalliance.org/">here</a>.</p>
+                    <p> To learn more about UW Taiko Kai, click <a
+                            href="https://huskylink.washington.edu/organization/taikokai">here</a>.
+                    </p>
+                </div>  
+            </div>
+            
+            
         </section>
     </main>
 
-    <footer>
-        <p>&copy; Dorothy Lu & Aaron Zhao</p>
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <!-- Contact Taiko -->
+        <div class="w3-container w3-content" style="max-width:800px" id="contact">
+            <h2 class="w3-wide w3-center">CONTACT</h2>
+            <div class="w3-row w3-center  w3-padding-32">
+                <div class="w3-col w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker" style="width:30px"></i>Seattle, WA 98105 United States<br>
+                    <i class="fa fa-phone" style="width:30px"></i> Phone: 425-879-6802<br>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email: uwtaiko@gmail.com<br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/uwtaikokai/"></a>
+        <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/taikokai/"></a>
+        <a class="fa fa-youtube w3-hover-opacity" href="https://www.youtube.com/channel/UCfNit59pCLMfxQzRrVRrXTQ"></a>
+        <p class="byline">&copy; Dorothy Lu & Aaron Zhao</p>
     </footer>
 
 </body>

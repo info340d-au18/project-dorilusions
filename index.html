@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="img/icon-purple.png">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,8 +24,6 @@
             <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
             <a href="booking.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Booking</a>
             <a href="proposal.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Proposal</a>
-            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
-                    class="fa fa-search"></i></a>
         </div>
     </div>
 
@@ -39,12 +39,12 @@
     <div class="w3-content" style="max-width:2000px;margin-top:46px">
         <!-- Hero Img -->
         <div class="w3-display-container w3-center">
-            <img id="banner" src="img/minidoka.jpg" style="width: 100%;" alt="Minidoka 2017">
+            <img class="banner" src="img/minidoka.jpg" style="width: 100%;" alt="Minidoka 2017">
             <div class="w3-display-middle w3-container w3-text-white w3-padding-64 w3-hide-small">
                 <h1 class="w3-text-white">Sun, Feb 16 || UW Taiko Kai Presents</h1>
-                <h1 class="w3-jumbo w3-text-white">Minidoka Day of Rememberance</h1>
-                <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off"><a
-                            href="">LEARN MORE</a></button></h6>
+                <h1 class="w3-jumbo w3-text-white w3-wide">Minidoka Day of Rememberance</h1>
+                <!-- <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off"><a
+                            href="">LEARN MORE</a></button></h6> -->
                 <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off"><a
                             href="#upcomingPerformances">MORE UPCOMING</a></button></h6>
             </div>
@@ -52,16 +52,18 @@
 
         <!-- Intro -->
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="intro">
-            <h2 class="w3-wide">WELCOME TO UW TAIKO KAI</h2>
-            <p class="w3-justify">Taiko Kai was founded in 2013 by the Matsudaira sisters, three UW students who wanted
-                to share Japanese culture with UW as well as the greater Seattle community. Since then, we have
-                performed at various campus events such as FIUTS's CulturalFest. We have also performed at noteworthy
-                events in the Seattle area like Redmond Lights and Sakura-Con.
+            <h2 class="w3-wide">WELCOME TO UW TAIKO KAI!</h2>
+            <p class="w3-justify">
+                Taiko Kai was founded in 2013 by the Matsudaira sisters, three UW students who wanted
+                to share Japanese culture with UW and the greater Seattle community. Since then, we have
+                performed at various events on and off campus such as the FIUTS CulturalFest, Redmond Lights, and Sakura-Con. 
+            </p>
 
-                Our club focuses on its members, helping them develop personal and team-based performance skills. Our
+            <p class="w3-justify"> Our club focuses on its members, helping them develop personal and team-based performance skills. Our
                 members learn about how to effectively move their bodies and perform for an audience. Our club also
                 builds connections between its members and the American Japanese community, working with other Taiko
-                groups and Japanese events.</p>
+                groups and Japanese events.
+            </p>
         </div>
 
         <!-- Upcoming performances -->
@@ -71,12 +73,11 @@
 
                 <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
                     <div class="w3-margin-bottom">
-                        <img src="img/taikokaispringconcert.jpg" alt="NSU Day Of Rememberance" style="width:100%"
+                        <img src="img/nsudor.jpg" alt="NSU Day of Rememberance" style="width:100%"
                             class="w3-hover-opacity">
                         <div class="w3-container w3-white w3-center">
                             <p><b>NSU Day Of Rememberance</b></p>
-                            <p class="w3-opacity">Fri 27 Nov 2016</p>
-                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <p class="w3-opacity">Feburary 20 6-8PM</p>
                             <button class="w3-button w3-black w3-margin-bottom">Learn More</button>
                         </div>
                     </div>
@@ -86,7 +87,6 @@
                         <div class="w3-container w3-white w3-center">
                             <p><b>TOSA Carnival</b></p>
                             <p class="w3-opacity">Feburary 22nd 3-8PM</p>
-                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
                             <button class="w3-button w3-black w3-margin-bottom">Learn More</button>
                         </div>
                     </div>
@@ -94,8 +94,7 @@
                         <img src="img/sakuracon2020.jpg" alt="Sakuracon" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container w3-white w3-center">
                             <p><b>Sakura-Con</b></p>
-                            <p class="w3-opacity">Sun 29 Nov 2016</p>
-                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <p class="w3-opacity">April 11th 10-11 AM</p>
                             <button class="w3-button w3-black w3-margin-bottom">Learn More</button>
                         </div>
                     </div>
@@ -123,8 +122,7 @@
         <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/uwtaikokai/"></a>
         <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/taikokai/"></a>
         <a class="fa fa-youtube w3-hover-opacity" href="https://www.youtube.com/channel/UCfNit59pCLMfxQzRrVRrXTQ"></a>
-        <p>&copy; Dorothy Lu & Aaron Zhao</p>
-        </p>
+        <p class="byline">&copy; Dorothy Lu & Aaron Zhao</p>
     </footer>
 </body>
 

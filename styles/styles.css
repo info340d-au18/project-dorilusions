@@ -41,6 +41,10 @@ body {
     display: none
 }
 
-ul.noBullet{
-    list-style: none;
+.byline {
+    font-size: 1rem;
+}
 
+.banner {
+    filter: brightness(50%);
+}
