@@ -1,0 +1,16 @@
+# Stage 3 Plan
+Due: Sunday, Feb 7, 8 PM
+
+
+Dorothy:
+Add pop up
+Add more event animation
+Add logo
+Add embedded Google calendar
+
+
+Aaron:
+
+Add social media feed
+Add login bottom, login page
+Add information page
