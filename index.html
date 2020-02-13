@@ -15,13 +15,20 @@
 </head>
 
 <body>
+
+    <!-- Navbar on small screens -->
+    <nav id="nav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:60px">
+        <a href="booking.html" class="navLink" onclick="navToggle()">BOOKING</a>
+        <a href="proposal.html" class="navLink" onclick="navToggle()">PROPOSAL</a>
+        <a href="signin.html" class="navLink">SIGN IN</a>
+    </nav>
+
     <!-- Navbar -->
     <nav class="w3-top">
         <div class="w3-bar w3-card transparentNav">
-            <a class="navLink w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0)" onclick="navToggle()" title="Toggle Navigation Menu"><i
-                    class="fa fa-bars"></i></a>
-            <a href="index.html" class="navLink" ><img src="img/logo-new.png" class="homeLogo"></a>
+            <a class="navLink w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navToggle()"
+                title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="navLink"><img src="img/logo-new.png" class="homeLogo"></a>
             <!--<a href="index.html" class="navLink">HOME</a>-->
             <a href="booking.html" class="navLink w3-hide-small">BOOKING</a>
             <a href="proposal.html" class="navLink w3-hide-small">PROPOSAL</a>
@@ -29,15 +36,10 @@
         </div>
     </nav>
 
-    <!-- Navbar on small screens -->
-    <nav id="nav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:75px">
-        <a href="booking.html" class="navLink" onclick="navToggle()">BOOKING</a>
-        <a href="proposal.html" class="navLink" onclick="navToggle()">PROPOSAL</a>
-        <a href="signin.html" class="navLink">SIGN IN</a>
-    </nav>
+
 
     <!-- Page content -->
-    <div class="w3-content" style="max-width:2000px;">
+    <div class="w3-content" style="max-width:2000px; margin-top:60px">
         <!-- Hero Img -->
         <div class="w3-display-container w3-center">
             <img class="banner" src="img/minidoka.jpg" alt="Minidoka 2017">
@@ -77,13 +79,14 @@
 
                 <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
                     <div class="w3-margin-bottom">
-                        <img src="img/nsudor.jpg" alt="NSU Day of Rememberance" style="width:100%"
-                           >
+                        <img src="img/nsudor.jpg" alt="NSU Day of Rememberance" style="width:100%">
                         <div class="w3-container w3-white w3-center">
                             <p><b>NSU Day Of Rememberance</b></p>
                             <p>UW Intellectual House</p>
                             <p class="w3-opacity">Feburary 20 6-8 PM</p>
-                            <button class="basicButton" onclick="document.getElementById('eventModal').style.display='block'">Learn More</button>
+                            <button class="basicButton"
+                                onclick="document.getElementById('eventModal-1').style.display='block'">Learn
+                                More</button>
                         </div>
                     </div>
                     <div class="w3-margin-bottom">
@@ -93,7 +96,9 @@
                             <p><b>TOSA Carnival</b></p>
                             <p>UW HUB Ballroom</p>
                             <p class="w3-opacity">Feburary 22nd 3-8 PM</p>
-                            <button class="basicButton" onclick="document.getElementById('eventModal').style.display='block'">Learn More</button>
+                            <button class="basicButton"
+                                onclick="document.getElementById('eventModal-2').style.display='block'">Learn
+                                More</button>
                         </div>
                     </div>
                     <div class="w3-margin-bottom">
@@ -102,7 +107,9 @@
                             <p><b>Sakura-Con</b></p>
                             <p>Washington State Convention Center</p>
                             <p class="w3-opacity">April 11th 10-11 AM</p>
-                            <button class="basicButton" onclick="document.getElementById('eventModal').style.display='block'">Learn More</button>
+                            <button class="basicButton"
+                                onclick="document.getElementById('eventModal-3').style.display='block'">Learn
+                                More</button>
                         </div>
                     </div>
                 </div>
@@ -110,18 +117,82 @@
         </div>
 
         <!-- Event Box -->
-        <div id="eventModal" class="eventModal">
+        <div id="eventModal-1" class="eventModal">
             <div class="eventModalContent w3-card-4">
-              <header class="w3-container w3-center w3-padding-32"> 
-                <span onclick="document.getElementById('eventModal').style.display='none'" 
-               class="w3-button w3-xlarge w3-display-topright">×</span>
-                <h2 class="w3-wide">Event Info</h2>
-              </header>
-              <div class="w3-container">
-                  <p>This shall be a detailed description of what the event is. As for now it is just filler text.</p>
-                <button class="basicButton w3-block w3-padding-16 w3-section w3-right"> ADD TO CALENDAR </button>
-                <button class="basicButton w3-section" onclick="document.getElementById('eventModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-              </div>
+                <header class="w3-container w3-center w3-padding-32">
+                    <span onclick="document.getElementById('eventModal').style.display='none'"
+                        class="w3-button w3-xlarge w3-display-topright">×</span>
+                    <h2 class="w3-wide">Event Info</h2>
+                </header>
+                <div class="w3-container">
+                    <p>Nikkei Student Union at UW invites you to our annual Day of Remembrance event on February 20th,
+                        2020! Day of Remembrance commemorates the signing of Executive Order 9066, which authorized the
+                        unjust imprisonment of over 120,000 Japanese American immigrants and citizens during WWII.
+                        Today, we are seeing history repeat itself with the inhumane detention and racist treatment of
+                        immigrants in our country. </p>
+                    <p>We are partnering with Japanese Student Association at University of Washington and ASUW Asian
+                        Student Commission to host a Tsuru Fold-in to contribute to the Tsuru for Solidarity movement.
+                        Tsuru, origami paper cranes, have long been a symbol of hope and compassion in Japanese culture.
+                        The Tsuru that we fold will be included in Tsuru for Solidarity’s National Pilgrimage to Close
+                        the Camps in Washington D.C. this June. Join us for a performance by Taiko Kai at the University
+                        of Washington , speakers, refreshments, and tsuru folding! </p>
+                    <p>The history of American concentration camps is part of our campus’s history. In 1942 over 400 UW
+                        students of Japanese ancestry were forced to leave their education behind and imprisoned due
+                        solely to their race. Through this event we hope to give the UW community an opportunity to pay
+                        tribute to this aspect of our history and recognize how the hateful ideology which motivated it
+                        continues to play out on and off our campus today. Come learn, fold, and find out about further
+                        actions you can take!</p>
+                    <p>February 20th, 2020, 6:00-8:00pm at UW’s Intellectual House</p>
+                    <button class="basicButton w3-block w3-padding-16 w3-section w3-right"> ADD TO CALENDAR </button>
+                    <button class="basicButton w3-section"
+                        onclick="document.getElementById('eventModal-1').style.display='none'">Close <i
+                            class="fa fa-remove"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="eventModal-2" class="eventModal">
+            <div class="eventModalContent w3-card-4">
+                <header class="w3-container w3-center w3-padding-32">
+                    <span onclick="document.getElementById('eventModal').style.display='none'"
+                        class="w3-button w3-xlarge w3-display-topright">×</span>
+                    <h2 class="w3-wide">Event Info</h2>
+                </header>
+                <div class="w3-container">
+                    <p>TOSA is back again with our annual event to take you for a trip down memory lane -- Timeless
+                        Taiwan! We welcome you to immerse yourself in an authentic Taiwanese experience as we celebrate
+                        Youth, Dreams, Friendship, and Love.</p>
+                    <p>Flying in from Taiwan to headline at Timeless Taiwan this year is our celebrity guest, Andrew Tan
+                        陳勢安! A Malaysian-born singer who debuted in Taiwan, Andrew has taken over the hearts of all his
+                        listeners and you're next! You DON'T want to miss out!!</p>
+                    <p>February 22nd 2020
+                        3:00 - 8:00 P.M.HUB Ballroom</p>
+                    <button class="basicButton w3-block w3-padding-16 w3-section w3-right"> ADD TO CALENDAR </button>
+                    <button class="basicButton w3-section"
+                        onclick="document.getElementById('eventModal-2').style.display='none'">Close <i
+                            class="fa fa-remove"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="eventModal-3" class="eventModal">
+            <div class="eventModalContent w3-card-4">
+                <header class="w3-container w3-center w3-padding-32">
+                    <span onclick="document.getElementById('eventModal').style.display='none'"
+                        class="w3-button w3-xlarge w3-display-topright">×</span>
+                    <h2 class="w3-wide">Event Info</h2>
+                </header>
+                <div class="w3-container">
+                    <p>Sakura-Con is the oldest and most well-attended Anime Convention in the Pacific Northwest.
+                        Sakura-Con features all the things fans love, anime, manga, gaming, music, panels, guests,
+                        dances and more! Non-profit, all ages, and all volunteer run, Sakura-Con is truly "for the fans
+                        by the fans".
+                    </p>
+                    <button class="basicButton w3-block w3-padding-16 w3-section w3-right"> ADD TO CALENDAR </button>
+                    <button class="basicButton w3-section"
+                        onclick="document.getElementById('eventModal-3').style.display='none'">Close <i
+                            class="fa fa-remove"></i></button>
+                </div>
             </div>
         </div>
     </div>

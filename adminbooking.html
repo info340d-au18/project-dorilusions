@@ -15,9 +15,16 @@
 </head>
 
 <body>
+    <!-- Navbar on small screens -->
+    <nav id="nav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:60px">
+        <a href="booking.html" class="navLink" onclick="navToggle()">BOOKING</a>
+        <a href="proposal.html" class="navLink" onclick="navToggle()">PROPOSAL</a>
+        <a href="signin.html" class="navLink">SIGN OUT</a>
+    </nav>
+
     <!-- Navbar -->
     <nav class="w3-top">
-        <div class="w3-bar w3-black w3-card">
+        <div class="w3-bar w3-card transparentNav">
             <a class="navLink w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navToggle()"
                 title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="index.html" class="navLink"><img src="img/logo-new.png" class="homeLogo"></a>
@@ -28,20 +35,18 @@
         </div>
     </nav>
 
-    <!-- Navbar on small screens -->
-    <nav class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="booking.html" class="navLink" onclick="navToggle()">BOOKING</a>
-        <a href="proposal.html" class="navLink" onclick="navToggle()">PROPOSAL</a>
-        <a href="signin.html" class="navLink">SIGN OUT</a>
-    </nav>
-
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px; margin-top:46px">
         <h2 class="w3-center">PERFORMANCE REQUESTS</h2>
         <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
             <div class="w3-margin-bottom">
                 <div class="w3-container w3-center" style="border: rgb(189, 189, 189) solid 1px;">
                     <p><b>Hiking Club WTA Volunteering</b></p>
-                    <p>UW Intellectual House</p>
+                    <p>By Hiking Club at UW</p>
+                    <p>Contact Information: <a href="mailto:uwtaiko@gmail.com">Email:
+                            uwtaiko@gmail.com</a></p>
+                    <p>Purposed Price: 100 USD</p>
+                    <p>@: UW Intellectual House</p>
+                    <p>Additional Message: Dinner included!</p>
                     <p class="w3-opacity">May 20 6-8 PM</p>
                     <button class="basicButton">Accept</button>
                     <button class="basicButton">Remove</button>
@@ -50,7 +55,12 @@
             <div class="w3-margin-bottom">
                 <div class="w3-container w3-center" style="border: rgb(189, 189, 189) solid 1px;">
                     <p><b>IUGA Game Night</b></p>
+                    <p>By Informatics Undergraudate Association</p>
+                    <p>Contact Information: <a href="mailto:uwtaiko@gmail.com">Email:
+                            uwtaiko@gmail.com</a></p>
+                    <p>Purposed Price: 50 USD</p>
                     <p>MGH 066</p>
+                    <p>Additional Message: Dinner included!</p>
                     <p class="w3-opacity">Apirl 22nd 6-8 PM</p>
                     <button class="basicButton">Accept</button>
                     <button class="basicButton">Remove</button>
