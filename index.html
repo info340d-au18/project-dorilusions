@@ -17,7 +17,7 @@
 <body>
     <!-- Navbar -->
     <nav class="w3-top">
-        <div class="w3-bar w3-black w3-card">
+        <div class="w3-bar w3-card transparentNav">
             <a class="navLink w3-hide-medium w3-hide-large w3-right"
                 href="javascript:void(0)" onclick="navToggle()" title="Toggle Navigation Menu"><i
                     class="fa fa-bars"></i></a>
@@ -37,10 +37,10 @@
     </nav>
 
     <!-- Page content -->
-    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-content" style="max-width:2000px;">
         <!-- Hero Img -->
         <div class="w3-display-container w3-center">
-            <img class="banner" src="img/minidoka.jpg" style="width: 100%;" alt="Minidoka 2017">
+            <img class="banner" src="img/minidoka.jpg" alt="Minidoka 2017">
             <div class="w3-display-middle w3-container w3-text-white w3-padding-64 w3-hide-small">
                 <h1 class="w3-text-white">Sunday, Feburary 16</h1>
                 <h1 class="w3-jumbo w3-text-white w3-wide w3-margin-bottom">Minidoka Day of Rememberance</h1>
@@ -78,34 +78,49 @@
                 <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
                     <div class="w3-margin-bottom">
                         <img src="img/nsudor.jpg" alt="NSU Day of Rememberance" style="width:100%"
-                            class="w3-hover-opacity">
+                           >
                         <div class="w3-container w3-white w3-center">
                             <p><b>NSU Day Of Rememberance</b></p>
                             <p>UW Intellectual House</p>
                             <p class="w3-opacity">Feburary 20 6-8 PM</p>
-                            <button class="basicButton">Learn More</button>
+                            <button class="basicButton" onclick="document.getElementById('eventModal').style.display='block'">Learn More</button>
                         </div>
                     </div>
                     <div class="w3-margin-bottom">
                         <img src="img/tosatimeless.jpg" alt="Taiwanese Overseas Student Association event poster"
-                            style="width:100%" class="w3-hover-opacity">
+                            style="width:100%">
                         <div class="w3-container w3-white w3-center">
                             <p><b>TOSA Carnival</b></p>
                             <p>UW HUB Ballroom</p>
                             <p class="w3-opacity">Feburary 22nd 3-8 PM</p>
-                            <button class="basicButton">Learn More</button>
+                            <button class="basicButton" onclick="document.getElementById('eventModal').style.display='block'">Learn More</button>
                         </div>
                     </div>
                     <div class="w3-margin-bottom">
-                        <img src="img/sakuracon2020.jpg" alt="Sakuracon" style="width:100%" class="w3-hover-opacity">
+                        <img src="img/sakuracon2020.jpg" alt="Sakuracon" style="width:100%">
                         <div class="w3-container w3-white w3-center">
                             <p><b>Sakura-Con</b></p>
                             <p>Washington State Convention Center</p>
                             <p class="w3-opacity">April 11th 10-11 AM</p>
-                            <button class="basicButton">Learn More</button>
+                            <button class="basicButton" onclick="document.getElementById('eventModal').style.display='block'">Learn More</button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Event Box -->
+        <div id="eventModal" class="eventModal">
+            <div class="eventModalContent w3-card-4">
+              <header class="w3-container w3-center w3-padding-32"> 
+                <span onclick="document.getElementById('eventModal').style.display='none'" 
+               class="w3-button w3-xlarge w3-display-topright">×</span>
+                <h2 class="w3-wide">Event Info</h2>
+              </header>
+              <div class="w3-container">
+                <button class="basicButton w3-block w3-padding-16 w3-section w3-right"> ADD TO CALENDAR </button>
+                <button class="basicButton w3-section" onclick="document.getElementById('eventModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+              </div>
             </div>
         </div>
         <!-- End Page Content -->

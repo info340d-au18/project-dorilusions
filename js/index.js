@@ -7,3 +7,11 @@ function navToggle() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+// Exit modal when clicked outside the box
+var modal = document.getElementById('eventModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

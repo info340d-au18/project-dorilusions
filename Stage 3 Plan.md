@@ -10,6 +10,8 @@ Add embedded Google calendar
 Add pricing, location, honorary price (300) on booking page
 Add captcha
 Sitemap
+Page that would manage info from booking page
+
 
 Aaron:
 Add social media feed

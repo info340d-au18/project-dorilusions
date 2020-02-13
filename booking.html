@@ -37,9 +37,9 @@
     </nav>
 
     <!-- Image -->
-    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-content" style="max-width:2000px;">
         <div class="w3-display-container w3-center">
-            <img src="img/cover-photo.png" style="width: 100%;" alt="Minidoka 2017">
+            <img src="img/cover-photo.png" class="banner" alt="Minidoka 2017">
         </div>
     </div>
 
@@ -47,7 +47,8 @@
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="intro">
         <h2 class="w3-wide">Book a Performance</h2>
         <p class="w3-justify w3-center">
-            If you would like us to perform for your event, please fill out this form!
+            If you would like us to perform for your event, please fill out this form! The honorary price for a performance is $200,
+            through this may change depending on the location, length, and scale of the performance.
         </p>
         <!-- Booking Form -->
         <section class="booking-form">
@@ -60,6 +61,10 @@
                 <input type="email" id="email" name="email" placeholder="Email">
                 <label for="date" class="w3-left">Date Of Performance</label>
                 <input type="date" id="date" name="date" placeholder="Event Date">
+                <label for="event" class="w3-left">Location Of Performance</label>
+                <input type="text" id="eventName" name="eventLocation" placeholder="Address">
+                <label for="event" class="w3-left">Price Point</label>
+                <input type="number" min="0.01" step="0.01" id="eventPrice" name="pricePoint" placeholder="USD">
                 <label for="message" class="w3-left">Additional Message</label>
                 <textarea id="message" name="message" placeholder="Message"></textarea>
                 <form action="?" method="POST">
