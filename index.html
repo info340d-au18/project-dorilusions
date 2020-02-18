@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/index.js"></script>
     <title>Home</title>
 </head>
@@ -17,8 +20,10 @@
 <body>
     <!-- Navbar on small screens -->
     <nav id="nav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:60px">
-        <a href="booking.html" class="navLink" onclick="navToggle()">BOOKING</a>
         <a href="proposal.html" class="navLink" onclick="navToggle()">PROPOSAL</a>
+        <a href="engage.html" class="navLink" onclick="navToggle()">ENGAGE</a>
+        <a href="booking.html" class="navLink" onclick="navToggle()">BOOKING</a>
+        <a href="about.html" class="navLink" onclick="navToggle()">ABOUT</a>
         <a href="signin.html" class="navLink">SIGN IN</a>
     </nav>
 
@@ -29,8 +34,10 @@
                 title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="index.html" class="navLink"><img src="img/logo-new.png" class="homeLogo"></a>
             <!--<a href="index.html" class="navLink">HOME</a>-->
-            <a href="booking.html" class="navLink w3-hide-small">BOOKING</a>
             <a href="proposal.html" class="navLink w3-hide-small">PROPOSAL</a>
+            <a href="engage.html" class="navLink w3-hide-small">ENGAGE</a>
+            <a href="booking.html" class="navLink w3-hide-small">BOOKING</a>
+            <a href="about.html" class="navLink w3-hide-small">ABOUT</a>
             <a href="signin.html" class="navLink signIn w3-hide-small">SIGN IN</a>
         </div>
     </nav>
@@ -86,6 +93,7 @@
                                 More</button>
                         </div>
                     </div>
+
                     <div class="w3-margin-bottom">
                         <img src="img/tosatimeless.jpg" alt="Taiwanese Overseas Student Association event poster"
                             style="width:100%">
@@ -98,6 +106,7 @@
                                 More</button>
                         </div>
                     </div>
+
                     <div class="w3-margin-bottom">
                         <img src="img/sakuracon2020.jpg" alt="Sakuracon" style="width:100%">
                         <div class="w3-container w3-white w3-center">
@@ -113,11 +122,11 @@
             </div>
         </div>
 
-        <!-- Event Box -->
+        <!-- Event Box 1 -->
         <div id="eventModal-1" class="eventModal">
             <div class="eventModalContent w3-card-4">
                 <header class="w3-container w3-center w3-padding-32">
-                    <span onclick="document.getElementById('eventModal').style.display='none'"
+                    <span onclick="document.getElementById('eventModal-1').style.display='none'"
                         class="w3-button w3-xlarge w3-display-topright">×</span>
                     <h2 class="w3-wide">Event Info</h2>
                 </header>
@@ -140,18 +149,15 @@
                         continues to play out on and off our campus today. Come learn, fold, and find out about further
                         actions you can take!</p>
                     <p>February 20th, 2020, 6:00-8:00pm at UW’s Intellectual House</p>
-                    <button class="basicButton w3-block w3-padding-16 w3-section w3-right"> ADD TO CALENDAR </button>
-                    <button class="basicButton w3-section"
-                        onclick="document.getElementById('eventModal-1').style.display='none'">Close <i
-                            class="fa fa-remove"></i></button>
                 </div>
             </div>
         </div>
 
+        <!-- Event Box 2 -->
         <div id="eventModal-2" class="eventModal">
             <div class="eventModalContent w3-card-4">
                 <header class="w3-container w3-center w3-padding-32">
-                    <span onclick="document.getElementById('eventModal').style.display='none'"
+                    <span onclick="document.getElementById('eventModal-2').style.display='none'"
                         class="w3-button w3-xlarge w3-display-topright">×</span>
                     <h2 class="w3-wide">Event Info</h2>
                 </header>
@@ -164,18 +170,15 @@
                         listeners and you're next! You DON'T want to miss out!!</p>
                     <p>February 22nd 2020
                         3:00 - 8:00 P.M.HUB Ballroom</p>
-                    <button class="basicButton w3-block w3-padding-16 w3-section w3-right"> ADD TO CALENDAR </button>
-                    <button class="basicButton w3-section"
-                        onclick="document.getElementById('eventModal-2').style.display='none'">Close <i
-                            class="fa fa-remove"></i></button>
                 </div>
             </div>
         </div>
 
+        <!-- Event Box 3 -->
         <div id="eventModal-3" class="eventModal">
             <div class="eventModalContent w3-card-4">
                 <header class="w3-container w3-center w3-padding-32">
-                    <span onclick="document.getElementById('eventModal').style.display='none'"
+                    <span onclick="document.getElementById('eventModal-3').style.display='none'"
                         class="w3-button w3-xlarge w3-display-topright">×</span>
                     <h2 class="w3-wide">Event Info</h2>
                 </header>
@@ -185,10 +188,6 @@
                         dances and more! Non-profit, all ages, and all volunteer run, Sakura-Con is truly "for the fans
                         by the fans".
                     </p>
-                    <button class="basicButton w3-block w3-padding-16 w3-section w3-right"> ADD TO CALENDAR </button>
-                    <button class="basicButton w3-section"
-                        onclick="document.getElementById('eventModal-3').style.display='none'">Close <i
-                            class="fa fa-remove"></i></button>
                 </div>
             </div>
         </div>
