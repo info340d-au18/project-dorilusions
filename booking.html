@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/styles.css">
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="js/index.js"></script>
+    
     <title>Performance Booking</title>
 </head>
 
@@ -53,9 +54,10 @@
         </p>
         <!-- Booking Form -->
         <section class="booking-form">
-            <form action="after_booking.html">
+            <!-- action="after_booking.html" -->
+            <form id="booking-form" name="booking-form">
                 <label for="name" class="w3-left">Name/Organization</label>
-                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="text" id="name" name="name" placeholder="Name" value="">
                 <label for="event" class="w3-left">Name of Event</label>
                 <input type="text" id="eventName" name="eventName" placeholder="Event Name">
                 <label for="email" class="w3-left">Email</label>
@@ -63,7 +65,7 @@
                 <label for="date" class="w3-left">Date Of Performance</label>
                 <input type="date" id="date" name="date" placeholder="Event Date">
                 <label for="event" class="w3-left">Location Of Performance</label>
-                <input type="text" id="eventName" name="eventLocation" placeholder="Address">
+                <input type="text" id="eventLocation" name="eventLocation" placeholder="Address">
                 <label for="event" class="w3-left">Price Point</label>
                 <input type="number" min="0.01" step="0.01" id="eventPrice" name="pricePoint" placeholder="USD">
                 <label for="message" class="w3-left">Additional Message</label>
@@ -71,7 +73,8 @@
                 <form action="?" method="POST">
                     <div class="g-recaptcha" data-sitekey="6LdGMNgUAAAAAJuT9-b-cgb5JNm14cw-kNL7lZs8"></div>
                     <br />
-                    <input type="submit" value="Submit">
+                
+                    <input type="submit" value="submit" id="submit">
                 </form>
             </form>
         </section>
@@ -99,6 +102,7 @@
         <p class="byline">&copy; Dorothy Lu & Aaron Zhao</p>
         </p>
     </footer>
+    <script src="js/booking.js"></script>
 </body>
 
 </html>
