@@ -117,7 +117,12 @@ h2 {
   color: #000;
 }
 
-
+/*Calendar Page Styling*/
+#calendar {
+  margin-top: 90px;
+  padding: 24px;
+  text-align: center;
+}
 
 /*Admin Page Styling*/
 .contentBox {
