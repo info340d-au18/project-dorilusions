@@ -119,7 +119,6 @@ h2 {
 
 /*Calendar Page Styling*/
 #calendar {
-  margin-top: 90px;
   padding: 24px;
   text-align: center;
 }
@@ -165,13 +164,19 @@ h2 {
   margin: auto;
   background-color:#fff;
   position: relative;
-  padding: 0;
+  padding: 12px;
   outline: 0;
-  width:600px;
+  width:100%;
   animation:animatetop 0.4s;
 }
 
 @keyframes animatetop{
   from{top:-300px;opacity:0} 
   to{top:0;opacity:1}
+}
+
+@media (min-width:768px) {
+  .eventModalContent {
+    width: 600px;
+  }
 }

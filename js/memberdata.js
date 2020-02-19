@@ -1,14 +1,20 @@
 $(document).ready(function () {
-    var data;
-    $.ajax({
-        type: "GET",
-        url: "../data/members-list.csv",
-        dataType: "text",
-        success: function (response) {
-            data = $.csv.toArrays(response);
-            generateHtmlTable(data);
-        }
-    });
+    //var data;
+    // $.ajax({
+    //     type: "GET",
+    //     url: "data/members-list.csv",
+    //     dataType: "text",
+        // success: function (response) {
+        //     data = $.csv.toArrays(response);
+        //     generateHtmlTable(data);
+        //     console.log("please work");
+        // }
+        // .then(fn)
+    // });
+    d3.csv("data/members-list.csv").then(function(response){
+        generateHtmlTable(response);
+        console.log("pleaaaaase work");
+    })
 
     function generateHtmlTable(data) {
         var html = '<table  class="table table-condensed table-hover table-striped">';
