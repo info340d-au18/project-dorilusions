@@ -3,59 +3,43 @@
 
 // Store all information into state variable
 
-let state = {
-  bookingList :[],
-  addedBooking:null
+let newBooking = {
+
 };
 
-class Booking{
 
-    addOrg(org){
-      this.organization = org;
-    }
-    addName(name){
-      this.eventName = name;
-    }
-    addEmail(email){
-      this.email = email;
-    }
-    addDate(date){
-      this.date = date;
-    }
-    addLoc(location){
-      this.location = location;
-    }
-    addPrice(price){
-      this.price = price;
-    }
-    addMessage(message){
-      this.message = message;
-    }
-    render(){
-      state.bookingList.push(this);
-    }
+let name = document.querySelector('#name');
+let event = document.querySelector('#eventName');
+let email =document.querySelector('#email');
+let date = document.querySelector('#date');
+let eventlocation = document.querySelector('#eventLocation');
+let message = document.querySelector('#message');
 
-}
+name.addEventListener('input',function(){
+  newBooking.name = name.value;
+});
 
-// let bk = new Booking();
-// bk.addOrg('HCUW');
-// bk.render();
+event.addEventListener('input',function(){
+  newBooking.event = event.value;
+});
 
-// console.log(state.bookingList);
+email.addEventListener('input',function(){
+  newBooking.email = email.value;
+});
 
-let allInput = document.getElementsByTagName('input');
-
-console.log(allInput[0]);
-
-document.getElementById('name').addEventListener('input')
-
-// function update(input){
-//   state.inputtedBooking.organization = input;
-//   // console.log(state.inputtedBooking.organization);
-
-// }
+date.addEventListener('input',function(){
+  newBooking.date = date.value;
+});
+eventlocation.addEventListener('input',function(){
+  newBooking.eventlocation = eventlocation.value;
+});
+message.addEventListener('input',function(){
+  newBooking.message = message.value;
+})
 
 
+
+console.log(newBooking);
 // button.addEventListener('click', () =>{
 
 // })
