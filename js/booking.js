@@ -35,11 +35,5 @@ eventlocation.addEventListener('input',function(){
 });
 message.addEventListener('input',function(){
   newBooking.message = message.value;
-})
+})  
 
-
-
-console.log(newBooking);
-// button.addEventListener('click', () =>{
-
-// })
