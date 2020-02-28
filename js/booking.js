@@ -2,9 +2,10 @@
 
 
 // Store all information into state variable
-
-let newBooking = {
-
+// It stores all the info as for now but I will use to react
+// to do something with it during stage 4
+let state = {
+  newBooking:{}
 };
 
 
@@ -16,24 +17,27 @@ let eventlocation = document.querySelector('#eventLocation');
 let message = document.querySelector('#message');
 
 name.addEventListener('input',function(){
-  newBooking.name = name.value;
+  state.newBooking.name = name.value;
 });
 
 event.addEventListener('input',function(){
-  newBooking.event = event.value;
+  state.newBooking.event = event.value;
 });
 
 email.addEventListener('input',function(){
-  newBooking.email = email.value;
+  state.newBooking.email = email.value;
 });
 
 date.addEventListener('input',function(){
-  newBooking.date = date.value;
+  state.newBooking.date = date.value;
 });
-eventlocation.addEventListener('input',function(){
-  newBooking.eventlocation = eventlocation.value;
+eventlocation.addEventListener('input',function (){
+  state.newBooking.eventlocation = eventlocation.value;
 });
 message.addEventListener('input',function(){
-  newBooking.message = message.value;
+  state.newBooking.message = message.value;
 })  
 
+// console.log(state.newBooking);
+
+window.localStorage.setItem('bk',JSON.stringify(state.newBooking));
