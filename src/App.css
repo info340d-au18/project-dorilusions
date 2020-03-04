@@ -1,38 +1,182 @@
-.App {
+/* Import font */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/*Booking Page Styling Starts here*/
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: rgb(89, 1, 124);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgb(117, 0, 163);
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+/*Booking Page Styling Ends here*/
+
+/*General Styling Starts here*/
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.transparentNav {
+  background-color: #000;
+}
+
+h2 {
+  letter-spacing: 4px;
+}
+
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+.byline {
+    font-size: 1rem;
+}
+
+.banner {
+    filter: brightness(50%);
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+}
+
+.homeLogo {
+    height: 50px;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.navLink {
+  padding: 8px 16px;
+  width: auto;
+  border: none;
+  outline: 0;
+  border: none;
+  overflow: hidden;
+  text-decoration: none;
+  color: rgb(235, 235, 235);
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  padding:16px 16px 4px 24px;
+  transition: color 1s;
+  display: inline-block;
+}
+
+.navLink:hover {
+  color: rgb(160, 146, 68);
+}
+
+.signIn {
+  float: right;
+  margin-top: 30px;
+  padding-right: 24px;
+}
+
+.basicButton {
+  display: inline-block;
+  border: none;
+  padding: 8px 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: rgb(235, 235, 235);
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color:#000;
+  margin-bottom: 16px;
+  transition: color .2s, background-color .2s;
+}
+
+.basicButton:hover {
+  background-color: rgb(160, 146, 68);
+  color: #000;
+}
+
+/*Calendar Page Styling*/
+#calendar {
+  padding: 24px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Admin Page Styling*/
+.contentBox {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+  text-align: center;
+  padding-bottom: 64px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.adminCategories {
+  border: rgb(189, 189, 189) solid 1px;
+  padding: 24px;
+  width: 40%;
+  display: inline-block;
+  margin: 12px;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.adminCategories:hover {
+  background-color: #ccc;
 }
 
-.App-link {
-  color: #61dafb;
+/* Modal Styling */
+.eventModal {
+  z-index: 3;
+  display: none;
+  padding-top: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color:rgb(0,0,0);
+  background-color:rgba(0,0,0,0.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.eventModalContent {
+  margin: auto;
+  background-color:#fff;
+  position: relative;
+  padding: 12px;
+  outline: 0;
+  width:100%;
+  animation:animatetop 0.4s;
+}
+
+@keyframes animatetop{
+  from{top:-300px;opacity:0} 
+  to{top:0;opacity:1}
+}
+
+@media (min-width:768px) {
+  .eventModalContent {
+    width: 600px;
   }
 }
