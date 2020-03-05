@@ -4,7 +4,7 @@ import { TextContainsFilter } from 'react-object-list/filters'
 import { FontAwesome } from 'react-object-list/icons'
 
 // import data using d3
-const mockData = require('./demo.data.json')
+const mockData = require('./member-data.json')
 const columns = [
     [{
         dataKey: 'first_name',
