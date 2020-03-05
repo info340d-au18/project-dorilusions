@@ -40,6 +40,18 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.page-content {
+  max-width: 800px;
+}
+
+.top-margin {
+  margin-top: 90px;
+}
+
+.icon {
+  max-width: 30px;
+}
+
 .transparentNav {
   background-color: #000;
 }
@@ -185,3 +197,4 @@ h2 {
     width: 600px;
   }
 }
+
