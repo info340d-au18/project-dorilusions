@@ -8,8 +8,10 @@ import { Signin } from './Signin';
 
 import logo from './img/logo-new.png';
 
+import './w3.css';
+
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 export class NavBar extends Component {
