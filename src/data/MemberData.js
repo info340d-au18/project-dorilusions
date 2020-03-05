@@ -1,3 +1,4 @@
+export const memberdata = `
 Performing Member,Name,Year Joined,Email,Phone
 yes,Kelsey Kua*,Autumn 2016,kuakt@uw.edu,360-556-3821
 yes,Michael Hart*,Autumn 2017,hartmj99@uw.edu,360-972-6334
@@ -30,3 +31,4 @@ yes,Yi Chen (Carrie) Lai,Autumn 2019,irislai1999@gmail.com,206-889-3478
 gave form,Cameron McWilliams,Autumn 2019,sndwv@uw.edu,360-878-5928
 yes,Akmal Mohd,Autumn 2019,akmalmd@uw.edu,206-455-3735
 no,Sohshun Tateishi,Winter 2020,n/a,n/a
+`;

@@ -136,7 +136,7 @@ h2 {
 }
 
 /*Calendar Page Styling*/
-#calendar {
+.calendar {
   padding: 24px;
   text-align: center;
 }
