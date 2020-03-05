@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { Homepage } from './Home';
 import { About } from './About';
-import { Engage } from './Engage';
+//import { Engage } from './Engage';
 import { Booking } from './Booking';
 import { Signin } from './Signin';
 import { MemberDataTable } from './DataTable';
 import { SongDataTable } from './DataTable';
 
 import logo from './img/logo-new.png';
-
+import './App.css';
 import './w3.css';
-
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
-
-
 
 export class NavBar extends Component {
     render() {
@@ -26,11 +22,11 @@ export class NavBar extends Component {
                             title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
                         <Link to="/"><a class="navLink"><img src={logo} class="homeLogo"></img></a></Link>
                         {/* <Link to="/engage"><a class="navLink w3-hide-small">ENGAGE</a></Link> */}
-                        <Link to="/booking"><a class="navLink w3-hide-small">BOOKING</a></Link>
-                        <Link to="/about"><a class="navLink w3-hide-small">ABOUT</a></Link>
-                        <Link to="/memberdata"><a class="navLink w3-hide-small">MEMBERS</a></Link>
-                        <Link to="/songdata"><a class="navLink w3-hide-small">SONGS</a></Link>
-                        <Link to="/signin"><a class="navLink signIn w3-hide-small">SIGN IN</a></Link>
+                        <Link to="/booking"><a class="navLink w3-hide-small" style={{color:"white"}}>BOOKING</a></Link>
+                        <Link to="/about"><a class="navLink w3-hide-small" style={{color:"white"}}>ABOUT</a></Link>
+                        <Link to="/memberdata"><a class="navLink w3-hide-small" style={{color:"white"}}>MEMBERS</a></Link>
+                        <Link to="/songdata"><a class="navLink w3-hide-small" style={{color:"white"}}>SONGS</a></Link>
+                        <Link to="/signin"><a class="navLink signIn w3-hide-small" style={{color:"white"}}>SIGN IN</a></Link>
                     </div>
                 </nav>
 
