@@ -1,11 +1,12 @@
-﻿Name,Matsuri,Swing,Kaeru,Omiyage,Hachijo,Bamboo,Korekara,Pulse-8
+export const songdata = `
+Name,Matsuri,Swing,Kaeru,Omiyage,Hachijo,Bamboo,Korekara,Pulse-8
 Kelsey Kua*,"C S","C S","C S","C S","C S M","C B","C U S",
 Michael Hart*,"C S","C S",C,"C S","C S M","C B","C U",
 Ryan Lowery,"C O",C,C,C,C,"C O","C U S",
 Grace Schroeder,"C S",C,C,C,"C M",,U,
 Rebecca Haynes,C,C,C,C,"C M",,,
 Steffany Ng,,C,C,C,C,,,
-Louis Sun*,,C,,C,"C S X",,"U, S",
+Louis Sun*,,C,,C,"C S X",,"U S",
 Bao Nguyen Quoc,,,,,,,,
 Nicole Urayama,,C,C,C,C,,U,
 Laura Shigeta (SPU)*,,C,,"C S",S,,U,
@@ -30,3 +31,4 @@ Alyssa Diller,,,,,,,,
 Yi Chen (Carrie) Lai,,,,,,,,
 Cameron McWilliams,,,,,,,,
 Akmal Mohd,,,,,,,,
+`
