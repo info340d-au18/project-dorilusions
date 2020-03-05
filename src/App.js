@@ -8,8 +8,10 @@ import { Footer } from './Footer';
 class App extends Component {
     render() {
         return (
-          < NavBar/>
-          < Footer />
+          <div>
+            < NavBar/> 
+            < Footer/>
+          </div>
         );
     }
 }
