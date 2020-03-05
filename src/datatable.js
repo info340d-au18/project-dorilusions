@@ -3,6 +3,7 @@ import ObjectList from 'react-object-list'
 import { TextContainsFilter } from 'react-object-list/filters'
 import { FontAwesome } from 'react-object-list/icons'
 
+// import data using d3
 const mockData = require('./demo.data.json')
 const columns = [
     [{
@@ -34,13 +35,13 @@ const columns = [
     },
 ]
 
-class Table extends React.Component {
+export class Table extends React.Component {
     state = {
         currentPage: 1,
-        perPage: 10,
+        perPage: 7,
         totalCount: mockData.length,
         sortKeys: [],
-        data: mockData.slice(0, 10),
+        data: mockData.slice(0, 7),
         filters: [{
             Renderer: TextContainsFilter,
             filterKey: 'first_name',
