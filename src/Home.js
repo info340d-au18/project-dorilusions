@@ -4,8 +4,10 @@ import nsudor from './img/nsudor.jpg';
 import tosa from './img/tosatimeless.jpg';
 import sakura from './img/sakuracon2020.jpg';
 
+
+
 import './w3.css'
-import styles from './App.css';
+import './App.css';
 
 
 export class Homepage extends Component {
@@ -82,45 +84,13 @@ export class Homepage extends Component {
                                     <button class="basicButton"
                                         onclick="document.getElementById('eventModal-3').style.display='block'">Learn
                                         More</button>
+                                    
                                 </div>
                             </div>
-
-                            
                         </div>
                     </div>
                 </div>
-
-                <div id="eventModal-1" class="eventModal">
-                    <div class="eventModalContent w3-card-4">
-                        <header class="w3-container w3-center w3-padding-32">
-                            <span onclick="document.getElementById('eventModal-1').style.display='none'"
-                                class="w3-button w3-xlarge w3-display-topright">×</span>
-                            <h2 class="w3-wide">Event Info</h2>
-                        </header>
-                        <div class="w3-container">
-                            <p>Nikkei Student Union at UW invites you to our annual Day of Remembrance event on February 20th,
-                                2020! Day of Remembrance commemorates the signing of Executive Order 9066, which authorized the
-                                unjust imprisonment of over 120,000 Japanese American immigrants and citizens during WWII.
-                                Today, we are seeing history repeat itself with the inhumane detention and racist treatment of
-                                immigrants in our country. </p>
-                            <p>We are partnering with Japanese Student Association at University of Washington and ASUW Asian
-                                Student Commission to host a Tsuru Fold-in to contribute to the Tsuru for Solidarity movement.
-                                Tsuru, origami paper cranes, have long been a symbol of hope and compassion in Japanese culture.
-                                The Tsuru that we fold will be included in Tsuru for Solidarity’s National Pilgrimage to Close
-                                the Camps in Washington D.C. this June. Join us for a performance by Taiko Kai at the University
-                                of Washington , speakers, refreshments, and tsuru folding! </p>
-                            <p>The history of American concentration camps is part of our campus’s history. In 1942 over 400 UW
-                                students of Japanese ancestry were forced to leave their education behind and imprisoned due
-                                solely to their race. Through this event we hope to give the UW community an opportunity to pay
-                                tribute to this aspect of our history and recognize how the hateful ideology which motivated it
-                                continues to play out on and off our campus today. Come learn, fold, and find out about further
-                                actions you can take!</p>
-                            <p>February 20th, 2020, 6:00-8:00pm at UW’s Intellectual House</p>
-                         </div>
-                    </div>
-                </div>
-
             </div>
         )
     }
-} 
+}   
