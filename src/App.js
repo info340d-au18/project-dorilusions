@@ -24,19 +24,7 @@ class App extends Component {
         return (
           <div>
             <Router>
-                <nav class="w3-top">
-                   <div class="w3-bar w3-card transparentNav">
-                        <a class="navLink w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navToggle()"
-                            title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-                        <Link to="/"><a class="navLink"><img src={logo} class="homeLogo"></img></a></Link>
-                        {/* <Link to="/engage"><a class="navLink w3-hide-small">ENGAGE</a></Link> */}
-                        <Link to="/booking"><a class="navLink w3-hide-small">BOOKING</a></Link>
-                        <Link to="/about"><a class="navLink w3-hide-small">ABOUT</a></Link>
-                        <Link to="/memberdata"><a class="navLink w3-hide-small">MEMBERS</a></Link>
-                        <Link to="/songdata"><a class="navLink w3-hide-small">SONGS</a></Link>
-                        <Link to="/signin"><a class="navLink signIn w3-hide-small">SIGN IN</a></Link>
-                    </div>
-                </nav>
+                <NavBar></NavBar>
 
                 <Route exact path="/" component={ Homepage } />
                 <Route path="/about" component={ About } />
