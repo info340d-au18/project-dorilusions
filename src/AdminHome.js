@@ -5,7 +5,7 @@ export class AdminHome extends Component {
     render() {
         return (
             <div>
-                wtf is going on
+                
             </div>
         );
     }

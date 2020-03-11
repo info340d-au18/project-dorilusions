@@ -1,34 +1,233 @@
-export const memberdata = `
-Performing Member,Name,Year Joined,Email,Phone
-yes,Kelsey Kua*,Autumn 2016,kuakt@uw.edu,360-556-3821
-yes,Michael Hart*,Autumn 2017,hartmj99@uw.edu,360-972-6334
-yes,Ryan Lowery,Autumn 2017,ryan.lowery97@gmail.com,206-294-2701
-yes,Grace Schroeder,Autumn 2017,grs8@uw.edu,425-879-6802
-yes,Rebecca Haynes,Autumn 2017,beccah.haynes@gmail.com,808-286-7243
-yes,Steffany Ng,Autumn 2017,sxng@uw.edu,917-525-8751
-yes,Louis Sun*,Autumn 2017,Lsun749@gmail.com,360-918-2003
-gave form,Bao Nguyen Quoc,Autumn 2017,quocbao@uw.edu,206-790-5373
-yes,Nicole Urayama,Winter 2018,dango511@uw.edu,n/a
-yes,Laura Shigeta (SPU)*,Autumn 2018,shigetal@spu.edu,n/a
-yes,Thomas Lin,Autumn 2018,thomas.lin129@gmail.com,n/a
-yes,Dorothy Lu,Autumn 2018,n/a,n/a
-yes,Hannah Tsai,Autumn 2018,tsaih98@uw.edu,n/a
-yes,Daniel Liu,Autumn 2018,liu333@uw.edu,n/a
-yes,Kai Levidow,Autumn 2018,levidowk@uw.edu,n/a
-yes,Sam Mak,Autumn 2018,maks2@uw.edu,n/a
-yes,Prachatorn Joemjumroon,Autumn 2018,prachatornjoe@gmail.com,n/a
-yes,Jennifer Lukban,Autumn 2018,lukbaj@uw.edu,n/a
-yes,Martin Tran*,Autumn 2018,tranm26@uw.edu,n/a
-yes,Alina Butler,Autumn 2019,ab12@uw.edu,n/a
-yes,Jason Chinn,Autumn 2019,jchinn2@uw.edu,253-590-7509
-yes,Taylor Zachary,Autumn 2019,tzachary@uw.edu,619-988-0311
-yes,Yi (Winnie) Zhong,Autumn 2019,winnieyzhong@gmail.com,206-913-1730
-yes,Kae Doan,Autumn 2019,kaeaudon@gmail.com,206-393-7538
-yes,Owen Tanaka,Autumn 2019,tanaka.owen@gmail.com,408-510-0771
-yes,Hantao Wang,Autumn 2019,wanghantao02@gmail.com,312-678-0421
-yes,Alyssa Diller,Autumn 2019,dilleral@uw.edu,360-441-2024
-yes,Yi Chen (Carrie) Lai,Autumn 2019,irislai1999@gmail.com,206-889-3478
-gave form,Cameron McWilliams,Autumn 2019,sndwv@uw.edu,360-878-5928
-yes,Akmal Mohd,Autumn 2019,akmalmd@uw.edu,206-455-3735
-no,Sohshun Tateishi,Winter 2020,n/a,n/a
-`;
+
+// yes,Alyssa Diller,Autumn 2019,dilleral@uw.edu,360-441-2024
+// yes,Yi Chen (Carrie) Lai,Autumn 2019,irislai1999@gmail.com,206-889-3478
+// gave form,Cameron McWilliams,Autumn 2019,sndwv@uw.edu,360-878-5928
+// yes,Akmal Mohd,Autumn 2019,akmalmd@uw.edu,206-455-3735
+// no,Sohshun Tateishi,Winter 2020,n/a,n/a
+
+
+export const data = {
+    columns: [
+      {
+        label: 'Performing Member',
+        field: 'perform',
+        sort: 'asc',
+        width: 150
+      },
+      {
+        label: 'Name',
+        field: 'name',
+        sort: 'asc',
+        width: 270
+      },
+      {
+        label: 'Year Joined',
+        field: 'yrjoined',
+        sort: 'asc',
+        width: 200
+      },
+      {
+        label: 'Email',
+        field: 'email',
+        sort: 'asc',
+        width: 100
+      },
+      {
+        label: 'Phone',
+        field: 'phone',
+        sort: 'asc',
+        width: 150
+      }
+    ],
+    rows: [
+      {
+        perform: 'Yes',
+        name: 'Kelsey Kua *',
+        yrjoined: 'Autumn 2016',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Michael Hart',
+        yrjoined: 'Autumn 2017',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Ryan Lowery',
+        yrjoined: 'Autumn 2017',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Kelsey Kua',
+        yrjoined: 'Autumn 2016',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Grace Schroeder',
+        yrjoined: 'Autumn 2017',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Rebecca Haynes',
+        yrjoined: 'Autumn 2017',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Steffany Ng',
+        yrjoined: 'Autumn 2017',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Louis Sun *',
+        yrjoined: 'Autumn 2017',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Gave Form',
+        name: 'Bao Nguyen Quoc',
+        yrjoined: 'Autumn 2017',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Nicole Urayama',
+        yrjoined: 'Winter 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Laura Shigeta (SPU)',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Thomas Lin',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Hannah Tsai (Grad)',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Dorothy Lu',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Daniel Liu',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Kai Levidow',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Sam Mak',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Prachatorn Joemjumroon',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Jennifer Lukban',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Martin Tran',
+        yrjoined: 'Autumn 2018',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Alina Butler',
+        yrjoined: 'Summer 2019',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Jason Chin',
+        yrjoined: 'Autumn 2019',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Taylor Zachary',
+        yrjoined: 'Autumn 2019',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Yi (Winnie) Zhong',
+        yrjoined: 'Autumn 2019',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Kae Doan',
+        yrjoined: 'Autumn 2019',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Owen Tanaka',
+        yrjoined: 'Autumn 2019',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      },
+      {
+        perform: 'Yes',
+        name: 'Hantao Wang',
+        yrjoined: 'Autumn 2019',
+        email: 'anon@uw.edu',
+        phone: '(000) 000-0000',
+      }
+    ]
+  };
