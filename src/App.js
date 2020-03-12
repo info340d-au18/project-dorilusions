@@ -34,9 +34,10 @@ class App extends Component {
                 <Route path="/memberdata" component={ MemberDataTable } />
                 <Route path="/songdata" component={ SongDataTable } />
 
+                <Footer></Footer>
             </Router>
             
-          </div>
+          </div>  
         );
     }
 }
