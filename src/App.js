@@ -69,14 +69,6 @@ class App extends Component {
     });
   }
 
-  handleInputChange = () => {
-    
-    this.setState({
-      isSignedIn: true
-    });
-    
-  }
-
   
   componentDidMount() {
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => {                        
@@ -110,7 +102,7 @@ class App extends Component {
 
               <Route exact path="/" component={ Homepage } />
               <Route path="/about" component={ About } />
-              {/* <Route path="/engage" component={ Engage } /> */}
+              <Route path="/engage" component={ Engage } />
               <Route path="/booking" component={ Booking } />
               
               {/* <Route path="/memberdata" component={ MemberDataTable } />
@@ -144,11 +136,11 @@ class App extends Component {
 
               <Route exact path="/" component={ Homepage } />
               <Route path="/about" component={ About } />
-              {/* <Route path="/engage" component={ Engage } /> */}
+              <Route path="/engage" component={ Engage } />
               <Route path="/booking" component={ Booking } />
               <Route path="/memberdata" component={ MemberDataTable } />
               <Route path="/songdata" component={ SongDataTable } />
-              <a class="navLink signIn w3-hide-small" style={{color:"white"}} onClick={this.toggleModal.bind(this)}>SIGN IN</a>
+              
               <Footer></Footer>
           </Router>
 

@@ -14,7 +14,7 @@ export class NavBar extends Component {
                         <a class="navLink w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navToggle()"
                             title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
                         <Link to="/"><a class="navLink"><img src={logo} class="homeLogo"></img></a></Link>
-                        {/* <Link to="/engage"><a class="navLink w3-hide-small">ENGAGE</a></Link> */}
+                        <Link to="/engage"><a class="navLink w3-hide-small" style={{color:"white"}}>ENGAGE</a></Link>
                         <Link to="/booking"><a class="navLink w3-hide-small" style={{color:"white"}}>BOOKING</a></Link>
                         <Link to="/about"><a class="navLink w3-hide-small" style={{color:"white"}}>ABOUT</a></Link>
                         <Link to="/memberdata"><a class="navLink w3-hide-small" style={{color:"white"}}>MEMBERS</a></Link>
