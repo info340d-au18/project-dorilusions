@@ -31,7 +31,7 @@ export class NavBarMember extends Component {
     render() {
         return (
             
-        <nav class="w3-top" style={{zIndex:10000}}>
+        <nav class="w3-top">
             <div class="w3-bar w3-card transparentNav">
 
                 <a class="navLink w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navToggle()"

@@ -36,11 +36,6 @@ export class Booking extends Component {
             submitted: !this.state.submitted
         });
     }
-    // Save this for Firebase
-    // handleSubmit(event) {
-    //     console.log(this.state.name);
-    //     event.preventDefault();
-    // }
 
     render() {
         if(this.state.submitted){
