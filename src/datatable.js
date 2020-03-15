@@ -36,10 +36,8 @@ export const MemberDataTable = () => {
                 />
             </div>
 
-            <Footer/>
+           
         </div>
-
-
     )
 }
 
@@ -57,8 +55,6 @@ export const SongDataTable = () => {
                     tableClassName="table table-striped table-hover"
                 />
             </div>
-
-            <Footer/>
         </div>
     )
 }

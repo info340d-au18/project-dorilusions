@@ -147,7 +147,7 @@ export class Homepage extends Component {
                     </div>
                 </div>
                 {/* Event Modal */}
-                <Modal show={this.state.isOpen} onClose={this.toggleModal}>
+                <Modal show={this.state.isOpen} onClose={this.toggleModal} style={{marginTop:60}}>
                     <Modal.Header>
                         <Modal.Title>{this.state.name}</Modal.Title>
                     </Modal.Header>

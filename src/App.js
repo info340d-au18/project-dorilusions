@@ -4,12 +4,10 @@ import { Homepage } from './Home';
 import { About } from './About';
 import { Engage } from './Engage';
 import { Booking } from './Booking';
-import { MemberDataTable } from './DataTable';
-import { SongDataTable } from './DataTable';
+import { MemberDataTable } from './datatable';
+import { SongDataTable } from './datatable';
 
 import './w3.css';
-
-import logo from './img/logo-new.png';
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button'
@@ -125,15 +123,15 @@ class App extends Component {
         <Router>
             <NavBarMember signout={this.signOut}></NavBarMember>
 
-              <Route exact path="/" component={ Homepage } />
-              <Route path="/about" component={ About } />
-              <Route path="/engage" component={ Engage } />
-              <Route path="/booking" component={ Booking } />
-              <Route path="/memberdata" component={ MemberDataTable } />
-              <Route path="/songdata" component={ SongDataTable } />
+            <Route exact path="/" component={ Homepage } />
+            <Route path="/about" component={ About } />
+            <Route path="/engage" component={ Engage } />
+            <Route path="/booking" component={ Booking } />
+            <Route path="/memberdata" component={ MemberDataTable } />
+            <Route path="/songdata" component={ SongDataTable } />
               
-              <Footer></Footer>
-          </Router>
+            <Footer></Footer>
+        </Router>
 
           
 

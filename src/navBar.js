@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-
+import Dropdown from 'react-bootstrap/Dropdown'
 import logo from './img/logo-new.png';
 
 import './w3.css';
@@ -91,8 +91,7 @@ export class NavBarMember extends Component {
                     )
                 }
             </div>
-         </nav>
-           
+         </nav>       
         )
     }
 }

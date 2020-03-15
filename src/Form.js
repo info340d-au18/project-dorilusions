@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 export class Form extends Component {
 
+
     render() {
         return (
 
-         
-            <section class="booking-form">
+         <div>
+            <section class="booking-form" onSubmit={this.props.submitted}>
                 <form id="booking-form" name="booking-form">
                     <label for="name" class="w3-left" >Name/Organization</label>
                     <input type="text" id="name" name="name" placeholder="Name" onChange={this.props.handleChange}></input>
@@ -22,10 +23,10 @@ export class Form extends Component {
                     <input type="number" min="0.01" step="0.01" id="eventPrice" name="pricePoint" placeholder="USD" onChange={this.props.handleChange}></input>
                     <label for="message" class="w3-left">Additional Message</label>
                     <textarea id="message" name="message" placeholder="Message" onChange={this.props.handleChange}></textarea>
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Submit" onClick={this.props.update}/>
                 </form>
             </section>
-            
+          </div>
         )
 
     }
