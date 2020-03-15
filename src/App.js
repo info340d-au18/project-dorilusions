@@ -5,8 +5,8 @@ import { About } from './About';
 import { Engage } from './Engage';
 import { Booking } from './Booking';
 import { Signin } from './Signin';
-import { MemberDataTable } from './datatable';
-import { SongDataTable } from './datatable';
+import { MemberDataTable } from './DataTable';
+import { SongDataTable } from './DataTable';
 
 import logo from './img/logo-new.png';
 
@@ -28,7 +28,7 @@ class App extends Component {
 
                 <Route exact path="/" component={ Homepage } />
                 <Route path="/about" component={ About } />
-                {/* <Route path="/engage" component={ Engage } /> */}
+                <Route path="/engage" component={ Engage } />
                 <Route path="/booking" component={ Booking } />
                 <Route path="/signin" component={ Signin } />
                 <Route path="/memberdata" component={ MemberDataTable } />
