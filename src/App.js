@@ -101,6 +101,7 @@ class App extends Component {
               <Route path="/songdata" component={ SongDataTable } /> */}
               <Footer></Footer>
           </Router>
+          
           <Modal show={this.state.isOpen} onClose={this.toggleModal}>
             <Modal.Header>
               <Modal.Title>{"Please Sign In Here"}</Modal.Title>

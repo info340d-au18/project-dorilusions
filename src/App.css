@@ -114,6 +114,14 @@ h2 {
   margin-top: 30px;
   padding-right: 24px;
 }
+.dropdown{
+  overflow: hidden;
+  display: block;
+  padding: 10px;
+  color: #000;
+  float: right;
+  max-width: 120px;
+}
 
 .basicButton {
   display: inline-block;
