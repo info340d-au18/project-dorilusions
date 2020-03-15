@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
 import {Form} from './Form';
+import firebase from 'firebase';
 export class Booking extends Component {
 
-    state = {
-        
-    };
+    constructor(props){
+        super(props);
+
+        this.state = {
+            submitted:false
+        };
+
+        this.bookings = firebase.database().ref('Bookings');
+    }
+
+    submit(){
+        this.bookings.push({
+            newBooking:this.state,
+        })
+    }
     
     // Lifting up state
     handleInputChange = (event) => {
@@ -14,10 +27,15 @@ export class Booking extends Component {
         this.setState({
           [name]: value
         });
-        console.log(this.state)
+
         
     }
 
+    changeState = () => {
+        this.setState({
+            submitted: !this.state.submitted
+        });
+    }
     // Save this for Firebase
     // handleSubmit(event) {
     //     console.log(this.state.name);
@@ -25,7 +43,20 @@ export class Booking extends Component {
     // }
 
     render() {
-        
+        if(this.state.submitted){
+            return(
+            <div class="w3-container w3-content w3-center w3-padding-64" id="intro"style={{maxWidth:800,marginTop:46}}>
+                <h2 class="w3-wide">Thank you for your booking!</h2>
+                    <p class="w3-justify w3-center">
+                        We greatly appreciate your interest in letting us to perform for you. We will get back to you soon.
+                        Feel free to follow us on our social media!
+                    </p>
+                    <p class="w3-justify w3-center">
+                        You can also manage your bookings in your profile.
+                    </p>
+            </div>
+            )
+        }
         return (
 
             <div class="w3-container w3-content w3-center w3-padding-64" style={{maxWidth:800,marginTop:90 }} id="intro">
@@ -37,7 +68,9 @@ export class Booking extends Component {
                 </p>
                 <Form 
                 input={this.state} 
-                handleChange = {this.handleInputChange}>
+                handleChange = {this.handleInputChange}
+                update = {() => this.submit()}
+                submitted = {this.changeState}>
                 </Form>
             </div>
         )

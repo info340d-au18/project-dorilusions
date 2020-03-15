@@ -9,8 +9,6 @@ import { SongDataTable } from './datatable';
 
 import './w3.css';
 
-import logo from './img/logo-new.png';
-
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button'
 
