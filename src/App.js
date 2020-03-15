@@ -18,6 +18,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import './App.css';
 import { NavBar } from './navBar';
+import { NavBarMember } from './navBar';
 import { Footer } from './Footer';
 
 import firebase from 'firebase';
@@ -69,7 +70,10 @@ class App extends Component {
     });
   }
 
-  
+  signOut(){
+    firebase.auth().signOut();
+  }
+
   componentDidMount() {
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => {                        
         this.setState({ isSignedIn: !!user })          
@@ -86,19 +90,7 @@ class App extends Component {
       return(
         <div>
           <Router>
-                <nav class="w3-top">
-                   <div class="w3-bar w3-card transparentNav">
-                        <a class="navLink w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navToggle()"
-                            title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-                        <Link to="/"><a class="navLink"><img src={logo} class="homeLogo"></img></a></Link>
-                        {/* <Link to="/engage"><a class="navLink w3-hide-small">ENGAGE</a></Link> */}
-                        <Link to="/booking"><a class="navLink w3-hide-small" style={{color:"white"}}>BOOKING</a></Link>
-                        <Link to="/about"><a class="navLink w3-hide-small" style={{color:"white"}}>ABOUT</a></Link>
-                        {/* <Link to="/memberdata"><a class="navLink w3-hide-small" style={{color:"white"}}>MEMBERS</a></Link>
-                        <Link to="/songdata"><a class="navLink w3-hide-small" style={{color:"white"}}>SONGS</a></Link> */}
-                        <a class="navLink signIn w3-hide-small" style={{color:"white"}} onClick={this.toggleModal.bind(this)}>SIGN IN</a>
-                    </div>
-                </nav>
+              <NavBar openModal={this.toggleModal}></NavBar>
 
               <Route exact path="/" component={ Homepage } />
               <Route path="/about" component={ About } />
@@ -110,19 +102,19 @@ class App extends Component {
               <Footer></Footer>
           </Router>
           <Modal show={this.state.isOpen} onClose={this.toggleModal}>
-                    <Modal.Header>
-                        <Modal.Title>{"Please Sign In Here"}</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        {<div>
-                          <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}></StyledFirebaseAuth>
-                        </div>}
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={this.toggleModal}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
+            <Modal.Header>
+              <Modal.Title>{"Please Sign In Here"}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              {<div>
+                <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}></StyledFirebaseAuth>
+              </div>}
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={this.toggleModal}>
+                Close
+                </Button>
+            </Modal.Footer>
           </Modal>
         </div>  
       );
@@ -130,9 +122,7 @@ class App extends Component {
     return (
       <div>
         <Router>
-            <NavBar>
-
-            </NavBar>
+            <NavBarMember signout={this.signOut}></NavBarMember>
 
               <Route exact path="/" component={ Homepage } />
               <Route path="/about" component={ About } />
