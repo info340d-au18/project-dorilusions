@@ -4,8 +4,8 @@ import { Homepage } from './Home';
 import { About } from './About';
 import { Engage } from './Engage';
 import { Booking } from './Booking';
-import { MemberDataTable } from './datatable';
-import { SongDataTable } from './datatable';
+import { MemberDataTable } from './DataTable';
+import { SongDataTable } from './DataTable';
 
 import './w3.css';
 
