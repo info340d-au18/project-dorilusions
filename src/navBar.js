@@ -19,7 +19,6 @@ export class NavBar extends Component {
                         <Link to="/about"><a class="navLink w3-hide-small" style={{color:"white"}}>ABOUT</a></Link>
                         <Link to="/memberdata"><a class="navLink w3-hide-small" style={{color:"white"}}>MEMBERS</a></Link>
                         <Link to="/songdata"><a class="navLink w3-hide-small" style={{color:"white"}}>SONGS</a></Link>
-                        <Link to="/signin"><a class="navLink signIn w3-hide-small" style={{color:"white"}}>SIGN IN</a></Link>
                     </div>
                 </nav>
            

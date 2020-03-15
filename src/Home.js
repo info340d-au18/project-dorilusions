@@ -23,7 +23,6 @@ export class Homepage extends Component {
     }
 
     open = (data) => {
-        console.log(data);
         this.setState({
             isOpen: !this.state.isOpen,
             name: data[0],
