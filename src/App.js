@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Homepage } from './Home';
 import { About } from './About';
 import { Engage } from './Engage';
-import { Booking } from './Booking';
 import { Request } from './Request';
+import { Booking } from './Booking';
 import { MemberDataTable } from './datatable';
 import { SongDataTable } from './datatable';
 
@@ -16,9 +16,8 @@ import Button from 'react-bootstrap/Button'
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import './App.css';
-import { NavBar } from './navBar';
+import { NavBar, NavBarAdmin } from './navBar';
 import { NavBarMember } from './navBar';
-import { NavBarAdmin } from './navBar'
 import { Footer } from './Footer';
 
 import firebase from 'firebase';
@@ -77,10 +76,10 @@ class App extends Component {
   componentDidMount() {
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => { 
         // const userRef = this.favoritesRef.child(user.uid);
-        // userRef.on("value", (snapshot) => {
-        //   console.log("the value of favorites/userid changed, so i reset the state")
-        //     this.setState({ Booking: snapshot.val() })
-        // })                         
+        //   userRef.on("value", (snapshot) => {
+        //     console.log("the value of favorites/userid changed, so i reset the state")
+        //             this.setState({ favorites: snapshot.val() })
+        //         })                         
         this.setState({ isSignedIn: !!user })          
        
     })
@@ -102,7 +101,7 @@ class App extends Component {
               <Route path="/engage" component={ Engage } />
               <Route path="/booking" component={ Booking } />
               
-              {/* <Route path="/Admindata" component={ AdminDataTable } />
+              {/* <Route path="/memberdata" component={ MemberDataTable } />
               <Route path="/songdata" component={ SongDataTable } /> */}
               <Footer></Footer>
           </Router>
@@ -129,12 +128,12 @@ class App extends Component {
       <div>
         <Router>
             <NavBarAdmin signout={this.signOut}></NavBarAdmin>
-            <Route path="/requests" component={Request}></Route>
+            <Route path="/requests" component={ Request } />
             <Route exact path="/" component={ Homepage } />
             <Route path="/about" component={ About } />
             <Route path="/engage" component={ Engage } />
             <Route path="/booking" component={ Booking } />
-            <Route path="/Admindata" component={ MemberDataTable } />
+            <Route path="/memberdata" component={ MemberDataTable } />
             <Route path="/songdata" component={ SongDataTable } />
               
             <Footer></Footer>
