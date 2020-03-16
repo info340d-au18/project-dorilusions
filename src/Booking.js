@@ -14,9 +14,19 @@ export class Booking extends Component {
     }
 
     submit(){
-        this.bookings.push({
-            newBooking:this.state,
-        })
+       
+        if(firebase.auth().currentUser == null){
+            this.bookings.push({
+                newBooking:this.state,
+            })
+        }   
+        else{
+            const userRef = this.bookings.child(firebase.auth().currentUser.uid); 
+            userRef.push({
+                newBooking:this.state,
+            })
+        }
+       
     }
     
     // Lifting up state

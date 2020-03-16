@@ -73,7 +73,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => {                        
+    this.unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => { 
+        // const userRef = this.favoritesRef.child(user.uid);
+        // userRef.on("value", (snapshot) => {
+        //   console.log("the value of favorites/userid changed, so i reset the state")
+        //     this.setState({ Booking: snapshot.val() })
+        // })                         
         this.setState({ isSignedIn: !!user })          
        
     })
