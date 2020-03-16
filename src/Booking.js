@@ -5,7 +5,6 @@ export class Booking extends Component {
 
     constructor(props){
         super(props);
-
         this.state = {
             submitted:false
         };
@@ -13,21 +12,29 @@ export class Booking extends Component {
         this.bookings = firebase.database().ref('Bookings');
     }
 
+    
     submit(){
        
         if(firebase.auth().currentUser == null){
             this.bookings.push({
                 newBooking:this.state,
+                id:null
             })
         }   
         else{
-            const userRef = this.bookings.child(firebase.auth().currentUser.uid); 
+            
+            const userRef = this.bookings.child(firebase.auth().currentUser.uid);
+            
+            // this.changeId();
+            console.log(this.state);    
             userRef.push({
                 newBooking:this.state,
+                id:firebase.auth().currentUser.uid
             })
         }
        
     }
+
     
     // Lifting up state
     handleInputChange = (event) => {
@@ -71,7 +78,7 @@ export class Booking extends Component {
                     performance is $200,
                     through this may change depending on the location, length, and scale of the performance.
                 </p>
-                <Form 
+                <Form
                 input={this.state} 
                 handleChange = {this.handleInputChange}
                 update = {() => this.submit()}

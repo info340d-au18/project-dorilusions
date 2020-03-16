@@ -4,6 +4,7 @@ import { Homepage } from './Home';
 import { About } from './About';
 import { Engage } from './Engage';
 import { Booking } from './Booking';
+import { Request } from './Request';
 import { MemberDataTable } from './datatable';
 import { SongDataTable } from './datatable';
 
@@ -128,7 +129,7 @@ class App extends Component {
       <div>
         <Router>
             <NavBarAdmin signout={this.signOut}></NavBarAdmin>
-
+            <Route path="/requests" component={Request}></Route>
             <Route exact path="/" component={ Homepage } />
             <Route path="/about" component={ About } />
             <Route path="/engage" component={ Engage } />
