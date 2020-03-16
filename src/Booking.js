@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Form} from './Form';
 import firebase from 'firebase';
+
+
 export class Booking extends Component {
 
     constructor(props){
@@ -27,8 +29,6 @@ export class Booking extends Component {
         this.setState({
           [name]: value
         });
-
-        
     }
 
     changeState = () => {

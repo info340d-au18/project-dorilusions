@@ -6,7 +6,9 @@ import sakura from './img/sakuracon2020.jpg';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button'
 import { HashLink as Link } from 'react-router-hash-link';
+import {FaHeart} from 'react-icons/fa'
 
+import firebase from 'firebase';
 
 import './w3.css'
 import './App.css';
@@ -18,8 +20,11 @@ export class Homepage extends Component {
         super(props);
     
         this.state = { 
-            isOpen: false 
+            isOpen: false,
+            isFavorited: false
         };
+
+        this.favoritesRef = firebase.database().ref('Favorites');
     }
 
     open = (data) => {
@@ -39,6 +44,14 @@ export class Homepage extends Component {
         });
     }
 
+    toggleFavorite = () => {
+        this.setState({
+            isFavorited: !this.state.isFavorited
+        });
+        this.favoritesRef.push({
+            newFavorite: this.state
+        })
+    }
 
     render() {
         let data1 = [
@@ -146,6 +159,7 @@ export class Homepage extends Component {
                         </div>
                     </div>
                 </div>
+
                 {/* Event Modal */}
                 <Modal show={this.state.isOpen} onClose={this.toggleModal} style={{marginTop:60}}>
                     <Modal.Header>
@@ -159,6 +173,7 @@ export class Homepage extends Component {
                         </div>}
                     </Modal.Body>
                     <Modal.Footer>
+                        <Button><FaHeart onClick = {this.toggleFavorite} style={{cursor:"pointer"}}/></Button>
                         <Button variant="secondary" onClick={this.toggleModal}>
                             Close
                         </Button>

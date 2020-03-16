@@ -6,6 +6,7 @@ import { Engage } from './Engage';
 import { Booking } from './Booking';
 import { MemberDataTable } from './datatable';
 import { SongDataTable } from './datatable';
+import { Favorites} from './Favorites';
 
 import './w3.css';
 
@@ -22,6 +23,8 @@ import { Footer } from './Footer';
 
 import firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import app from 'firebase/app';
+import 'firebase/auth';
 
 
 //Configure Firebase
@@ -45,11 +48,9 @@ const uiConfig = {
   signInSuccessUrl: '/',
   // We will display Google and Facebook as auth providers.
   signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID        
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
   ]
 };
-
-
 
 class App extends Component {
 
@@ -60,7 +61,6 @@ class App extends Component {
       isSignedIn: false,
       isOpen: false 
     }
-    
   }
 
   toggleModal = () => {
@@ -76,7 +76,6 @@ class App extends Component {
   componentDidMount() {
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => {                        
         this.setState({ isSignedIn: !!user })          
-       
     })
   }
 
@@ -103,7 +102,7 @@ class App extends Component {
           
           <Modal show={this.state.isOpen} onClose={this.toggleModal}>
             <Modal.Header>
-              <Modal.Title>{"Please Sign In Here"}</Modal.Title>
+              <Modal.Title>{"Sign In"}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               {<div>
@@ -128,17 +127,15 @@ class App extends Component {
             <Route path="/about" component={ About } />
             <Route path="/engage" component={ Engage } />
             <Route path="/booking" component={ Booking } />
-            <Route path="/Admindata" component={ MemberDataTable } />
+            <Route path="/memberdata" component={ MemberDataTable } />
             <Route path="/songdata" component={ SongDataTable } />
+            <Route path="/favorites" component={ Favorites } />
               
             <Footer></Footer>
         </Router>
-
-          
-
-        </div>  
-      );
-    }
+      </div>  
+    );
+  }
 }
 
 export default App;

@@ -102,6 +102,7 @@ h2 {
 
 .navLink:hover {
   color: rgb(160, 146, 68);
+  text-decoration: none;
 }
 
 .navPar {
