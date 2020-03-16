@@ -52,10 +52,6 @@ body {
   max-width: 30px;
 }
 
-.transparentNav {
-  background-color: #000;
-}
-
 h2 {
   letter-spacing: 4px;
 }
@@ -108,17 +104,36 @@ h2 {
   color: rgb(160, 146, 68);
 }
 
-.signIn {
-  float: right;
-  margin-top: 30px;
-  padding-right: 24px;
+.navPar {
+  position: relative;
+  background-color: #000;
 }
+
+.navPar .leftMenu {
+  position: absolute;
+  bottom:0;
+  right: 0;
+  float: right;
+  margin-bottom: 4px;
+}
+
+.signIn {
+  padding:16px 16px 4px 24px;
+}
+
+.dropParent {
+  display: inline-block;
+}
+
+button {
+  outline: none;
+}
+
 .dropdown{
   overflow: hidden;
-  display: block;
-  padding: 10px;
+  position: absolute;
+  background-color: #000;
   color: #000;
-  float: right;
   max-width: 120px;
 }
 

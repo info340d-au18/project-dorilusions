@@ -17,6 +17,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import { NavBar } from './navBar';
 import { NavBarMember } from './navBar';
+import { NavBarAdmin } from './navBar'
 import { Footer } from './Footer';
 
 import firebase from 'firebase';
@@ -95,7 +96,7 @@ class App extends Component {
               <Route path="/engage" component={ Engage } />
               <Route path="/booking" component={ Booking } />
               
-              {/* <Route path="/memberdata" component={ MemberDataTable } />
+              {/* <Route path="/Admindata" component={ AdminDataTable } />
               <Route path="/songdata" component={ SongDataTable } /> */}
               <Footer></Footer>
           </Router>
@@ -121,13 +122,13 @@ class App extends Component {
     return (
       <div>
         <Router>
-            <NavBarMember signout={this.signOut}></NavBarMember>
+            <NavBarAdmin signout={this.signOut}></NavBarAdmin>
 
             <Route exact path="/" component={ Homepage } />
             <Route path="/about" component={ About } />
             <Route path="/engage" component={ Engage } />
             <Route path="/booking" component={ Booking } />
-            <Route path="/memberdata" component={ MemberDataTable } />
+            <Route path="/Admindata" component={ MemberDataTable } />
             <Route path="/songdata" component={ SongDataTable } />
               
             <Footer></Footer>
