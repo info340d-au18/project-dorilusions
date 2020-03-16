@@ -21,13 +21,19 @@ export class Request extends Component {
         })
     }
 
+    remove(name){
+        let currentid = firebase.auth().currentUser.uid;
+        let myRef = firebase.database().ref('Bookings/'+currentid);
+        
+        myRef.child(name).remove();
+    }
+
     render() {
         let allB = [];
-        let myRef = firebase.database().ref('Bookings/');
-            // Get the value of the data
-        let currentid = firebase.auth().currentUser.uid;
         let data = this.state.bookings;
-            
+        let currentid = firebase.auth().currentUser.uid;
+        let myRef = firebase.database().ref('Bookings/'+currentid);
+        // console.log(myRef.child('-M2Y_MxiJGJTF-KFIQdE').remove());
         if(data != null){
             let keys = Object.keys(data);
                 for(let i=0; i <keys.length;i++){
@@ -38,12 +44,12 @@ export class Request extends Component {
                         for(let j=0; j < BookingKeys.length;j++){
                             let oneBooking = allBookings[BookingKeys[j]].newBooking;
                             let thesekeys = Object.keys(oneBooking);
-                            let whatever = {};
+                            let individual = {};
                             for(let k = 0; k <thesekeys.length;k++){
-                                whatever[[thesekeys[k]]] = oneBooking[thesekeys[k]];
+                                individual[[thesekeys[k]]] = oneBooking[thesekeys[k]];
                             }
-                            
-                            allB.push(whatever)
+                            individual["key"] = BookingKeys[j];
+                            allB.push(individual);
                         
                         }
                             
@@ -76,9 +82,8 @@ export class Request extends Component {
                                     <p id="price">{"Purposed Price" + indB.pricePoint}</p>
                                     <p id="location">{"@: " + indB.eventLocation}</p>
                                     <p id="message">{"Additional Message:" + indB.message}</p>
-                                    <p id="Time" class="w3-opacity">{indB.date}</p>
-                                    {/* <button id="accept" class="basicButton" onclick="accept(this)">Accept</button>
-                                    <button id="remove" class="basicButton" onclick="remove(this)">Remove</button> */}
+                                    <p id="Time" class="w3-opacity">{indB.date}</p>                          
+                                    <button class="basicButton" onClick={this.remove.bind(this,indB.key)}>Remove</button>
                                 </div>
                             </div>
                         )
