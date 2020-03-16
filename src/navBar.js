@@ -79,8 +79,8 @@ export class NavBarMember extends Component {
                         this.state.showMenu
                             ? (
                             <div class="dropdown" ref={(element) => {this.dropdownMenu = element;}}>
-                                <Link to="/favorites" class="navLink"><a>FAVORITES</a></Link>
-                                <Link to="/requests" class="navLink"><a>REQUESTS</a></Link>
+                                <Link to="/request" class="navLink"><a>FAVORITES</a></Link>
+                                <Link to="/performances" class="navLink"><a>REQUESTS</a></Link>
                             </div>
                             )
                             : (
