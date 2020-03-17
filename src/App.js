@@ -7,7 +7,7 @@ import { Request } from './Request';
 import { Booking } from './Booking';
 import { MemberDataTable } from './datatable';
 import { SongDataTable } from './datatable';
-import { Favorites} from './Favorites';
+import { Favorites } from './Favorites';
 
 import './w3.css';
 

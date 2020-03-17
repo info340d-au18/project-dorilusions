@@ -43,6 +43,7 @@ export class Request extends Component {
                         let BookingKeys = Object.keys(allBookings);
                         for(let j=0; j < BookingKeys.length;j++){
                             let oneBooking = allBookings[BookingKeys[j]].newBooking;
+                            console.log(oneBooking);
                             let thesekeys = Object.keys(oneBooking);
                             let individual = {};
                             for(let k = 0; k <thesekeys.length;k++){
