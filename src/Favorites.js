@@ -31,23 +31,27 @@ export class Favorites extends Component {
     render() {
         let faves = [];
         let data = this.state.favorites;
+        let currentid = firebase.auth().currentUser.uid;
 
         if(data != null){
             let keys = Object.keys(data);
             console.log(keys);
             for(let i=0; i < keys.length; i++){
-                let iDkey = keys[i];
-                let allFaves = data[iDkey];
-                let oneFave = allFaves.newFavorite;
-                let faveKey = Object.keys(oneFave);
-                let removalKey = Object.keys(allFaves);
-                let frame = {};
-                for(let k = 0; k <faveKey.length;k++){
-                    frame[[faveKey[k]]] = oneFave[faveKey[k]];   
+                if(keys[i] == currentid){
+                    let iDkey = keys[i];
+                    let allFaves = data[iDkey];
+                    let oneFave = allFaves.newFavorite;
+                    let faveKey = Object.keys(oneFave);
+                    let removalKey = Object.keys(allFaves);
+                    let frame = {};
+                    for(let k = 0; k <faveKey.length;k++){
+                        frame[[faveKey[k]]] = oneFave[faveKey[k]];   
+                    }
+                    
+                    frame["key"] = removalKey[i];
+                    faves.push(frame);
                 }
                 
-                frame["key"] = removalKey[i];
-                faves.push(frame);
             }                        
         };                      
                 
