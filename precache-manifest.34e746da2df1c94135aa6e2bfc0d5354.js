@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4c97379ac13c086b328faedb7d5c211d",
+    "revision": "2fab6b002f6eb204d14f7b0ad7b90ef0",
     "url": "/project-dorilusions/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/project-dorilusions/static/css/2.192f965c.chunk.css"
   },
   {
-    "revision": "720d1b641acc5d9d275a",
+    "revision": "0836b6b7731c99d9a178",
     "url": "/project-dorilusions/static/css/main.99819b91.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/project-dorilusions/static/js/2.00f135db.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "720d1b641acc5d9d275a",
-    "url": "/project-dorilusions/static/js/main.3a321ff8.chunk.js"
+    "revision": "0836b6b7731c99d9a178",
+    "url": "/project-dorilusions/static/js/main.c77109a2.chunk.js"
   },
   {
     "revision": "63109e324c2857011f84",
