@@ -4,13 +4,14 @@ import { object } from 'prop-types';
 
 import './w3.css';
 import './App.css';
-export class Request extends Component {
 
+export class Request extends Component {
     constructor(props) {
         super(props);
         this.state = {
             loading : false
         }
+
         this.myRef = firebase.database().ref('Bookings/');
         this.myRef.on("value", (snapshot) => {
             if(!this.state.loading){
@@ -35,29 +36,27 @@ export class Request extends Component {
 
         if(data != null){
             let keys = Object.keys(data);
-                for(let i=0; i <keys.length;i++){
-                    if(keys[i] == currentid){
-                        let iDkey = keys[i];
-                        let allBookings = data[iDkey];
-                        let BookingKeys = Object.keys(allBookings);
-                        for(let j=0; j < BookingKeys.length;j++){
-                            let oneBooking = allBookings[BookingKeys[j]].newBooking;
-                            console.log(oneBooking);
-                            let thesekeys = Object.keys(oneBooking);
-                            let individual = {};
-                            for(let k = 0; k <thesekeys.length;k++){
-                                individual[[thesekeys[k]]] = oneBooking[thesekeys[k]];
-                            }
-                            individual["key"] = BookingKeys[j];
-                            allB.push(individual);
-                        
+
+            for(let i=0; i <keys.length;i++){
+                if(keys[i] == currentid){
+                    let iDkey = keys[i];
+                    let allBookings = data[iDkey];
+                    let BookingKeys = Object.keys(allBookings);
+
+                    for(let j=0; j < BookingKeys.length;j++){
+                        let oneBooking = allBookings[BookingKeys[j]].newBooking;
+                        let thesekeys = Object.keys(oneBooking);
+                        let individual = {};
+
+                        for(let k = 0; k <thesekeys.length;k++){
+                            individual[[thesekeys[k]]] = oneBooking[thesekeys[k]];
                         }
-                            
-                            
-                    }
                         
-                };
-                    
+                        individual["key"] = BookingKeys[j];
+                        allB.push(individual);
+                    }     
+                }                       
+            };                  
         }     
 
         if(!this.state.loading){
@@ -86,7 +85,6 @@ export class Request extends Component {
                 </div>
             </div> 
         )
-
     }
 }
 

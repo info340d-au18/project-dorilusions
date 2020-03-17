@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
+import { object } from 'prop-types';
 
 import './w3.css';
 import './App.css';
@@ -35,25 +36,31 @@ export class Favorites extends Component {
 
         if(data != null){
             let keys = Object.keys(data);
-            console.log(keys);
+
             for(let i=0; i < keys.length; i++){
                 if(keys[i] == currentid){
                     let iDkey = keys[i];
                     let allFaves = data[iDkey];
-                    let oneFave = allFaves.newFavorite;
-                    let faveKey = Object.keys(oneFave);
-                    let removalKey = Object.keys(allFaves);
-                    let frame = {};
-                    for(let k = 0; k <faveKey.length;k++){
-                        frame[[faveKey[k]]] = oneFave[faveKey[k]];   
+                    let faveKey = Object.keys(allFaves);
+
+                    for(let j=0; j < faveKey.length; j++){
+                        let oneFave = allFaves[faveKey[j]].newFavorite;
+                        let oneFaveKey = Object.keys(oneFave);
+                        let frame = {};
+                        console.log(oneFave);
+
+                        for(let k = 0; k < oneFaveKey.length; k++){
+                            frame[[oneFaveKey[k]]] = oneFave[oneFaveKey[k]];   
+                        }
+
+                        frame["key"] = faveKey[j];
+                        faves.push(frame);
                     }
-                    
-                    frame["key"] = removalKey[i];
-                    faves.push(frame);
                 }
-                
             }                        
-        };                      
+        };          
+        
+        console.log(faves);
                 
         if(!this.state.loading){
             return<p class="w3-center" style={{marginTop:100}}>{"Please Refresh your page"}</p>
@@ -70,7 +77,7 @@ export class Favorites extends Component {
                                     <p><b>{f.name}</b></p>
                                     <p>{"Location: " + f.loc}</p>
                                     <p>{"Time: " + f.time}</p>                          
-                                    {/* <button class="basicButton" onClick={this.remove.bind(this,f.key)}>Remove</button> */}
+                                    <button class="basicButton" onClick={this.remove.bind(this,f.key)}>Remove</button>
                                 </div>
                             </div>
                         )
