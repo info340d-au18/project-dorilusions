@@ -23,7 +23,7 @@ export class Request extends Component {
 
     remove(name){
         let currentid = firebase.auth().currentUser.uid;
-        let myRef = firebase.database().ref('Bookings/'+currentid);
+        let myRef = firebase.database().ref('Bookings/' + currentid);
         
         myRef.child(name).remove();
     }
@@ -32,8 +32,7 @@ export class Request extends Component {
         let allB = [];
         let data = this.state.bookings;
         let currentid = firebase.auth().currentUser.uid;
-        let myRef = firebase.database().ref('Bookings/'+currentid);
-        // console.log(myRef.child('-M2Y_MxiJGJTF-KFIQdE').remove());
+
         if(data != null){
             let keys = Object.keys(data);
                 for(let i=0; i <keys.length;i++){
@@ -60,12 +59,7 @@ export class Request extends Component {
                 };
                     
         }     
-                
-        
-        console.log(allB);
-        // if(allB.length == 0){
-        //     window.location.reload();
-        // }
+
         if(!this.state.loading){
             return<p class="w3-center" style={{marginTop:100}}>{"Please Refresh your page"}</p>
         }

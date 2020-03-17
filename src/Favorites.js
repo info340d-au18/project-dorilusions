@@ -31,7 +31,6 @@ export class Favorites extends Component {
     render() {
         let faves = [];
         let data = this.state.favorites;
-        console.log(data);
 
         if(data != null){
             let keys = Object.keys(data);
@@ -40,15 +39,15 @@ export class Favorites extends Component {
                 let iDkey = keys[i];
                 let allFaves = data[iDkey];
                 let oneFave = allFaves.newFavorite;
-                console.log(oneFave);
                 let faveKey = Object.keys(oneFave);
+                let removalKey = Object.keys(allFaves);
                 let frame = {};
                 for(let k = 0; k <faveKey.length;k++){
-                    frame[[faveKey[k]]] = oneFave[faveKey[k]];
+                    frame[[faveKey[k]]] = oneFave[faveKey[k]];   
                 }
-                frame["key"] = faveKey[i];
+                
+                frame["key"] = removalKey[i];
                 faves.push(frame);
-                console.log(faves);
             }                        
         };                      
                 
@@ -67,7 +66,7 @@ export class Favorites extends Component {
                                     <p><b>{f.name}</b></p>
                                     <p>{"Location: " + f.loc}</p>
                                     <p>{"Time: " + f.time}</p>                          
-                                    <button class="basicButton" onClick={this.remove.bind(this,f.key)}>Remove</button>
+                                    {/* <button class="basicButton" onClick={this.remove.bind(this,f.key)}>Remove</button> */}
                                 </div>
                             </div>
                         )
@@ -75,7 +74,6 @@ export class Favorites extends Component {
                 </div>
             </div> 
         )
-
     }
 }
 

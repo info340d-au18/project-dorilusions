@@ -17,7 +17,7 @@ input, textarea {
   
   input[type=submit] {
     background-color: rgb(89, 1, 124);
-    color: white;
+    color: #fff;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -128,6 +128,11 @@ h2 {
 
 button {
   outline: none;
+}
+
+.favButton {
+  display: block;
+  float: left;
 }
 
 .dropdown{

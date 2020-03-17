@@ -16,8 +16,8 @@ export class Engage extends Component {
         events: [
           {
             start: new Date(),
-            end: new Date(moment().add(1, "days")),
-            title: "Some title"
+            end: new Date(moment().add(4, "days")),
+            title: "No practices until further notice, stay healthy!"
           }
         ]
       };

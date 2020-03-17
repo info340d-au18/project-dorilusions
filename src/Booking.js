@@ -13,7 +13,6 @@ export class Booking extends Component {
 
         this.bookings = firebase.database().ref('Bookings');
     }
-
     
     submit(){      
         if(firebase.auth().currentUser == null){
@@ -22,12 +21,9 @@ export class Booking extends Component {
                 id:null
             })
         }   
-        else{
-            
+        else{       
             const userRef = this.bookings.child(firebase.auth().currentUser.uid);
-            
-            // this.changeId();
-            console.log(this.state);    
+             
             userRef.push({
                 newBooking:this.state,
                 id:firebase.auth().currentUser.uid
@@ -35,7 +31,6 @@ export class Booking extends Component {
         }
        
     }
-
     
     // Lifting up state
     handleInputChange = (event) => {

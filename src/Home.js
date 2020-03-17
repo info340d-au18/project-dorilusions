@@ -21,7 +21,8 @@ export class Homepage extends Component {
     
         this.state = { 
             isOpen: false,
-            isFavorited: false
+            isFavorited: false,
+            color: 'lightgray'
         };
 
         this.favoritesRef = firebase.database().ref('Favorites');
@@ -52,6 +53,10 @@ export class Homepage extends Component {
         this.favoritesRef.push({
             newFavorite: this.state,
             id: firebase.auth().currentUser.uid
+        })
+
+        this.setState({
+            color: 'red'
         })
     }
 
@@ -175,7 +180,7 @@ export class Homepage extends Component {
                         </div>}
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick = {this.toggleFavorite}><FaHeart style={{cursor:"pointer"}}/></Button>
+                        <div class = "favButton"><Button variant="link" ><FaHeart onClick = {this.toggleFavorite} size={30} style={{fill:this.state.color}} /></Button></div>
                         <Button variant="secondary" onClick={this.toggleModal}>
                             Close
                         </Button>

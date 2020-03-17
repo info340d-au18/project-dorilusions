@@ -23,7 +23,6 @@ import { Footer } from './Footer';
 
 import firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import app from 'firebase/app';
 import 'firebase/auth';
 
 
@@ -74,12 +73,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => { 
-        // const userRef = this.favoritesRef.child(user.uid);
-        //   userRef.on("value", (snapshot) => {
-        //     console.log("the value of favorites/userid changed, so i reset the state")
-        //             this.setState({ favorites: snapshot.val() })
-        //         })                         
+    this.unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => {                        
         this.setState({ isSignedIn: !!user })          
     })
   }
@@ -100,8 +94,6 @@ class App extends Component {
               <Route path="/engage" component={ Engage } />
               <Route path="/booking" component={ Booking } />
               
-              {/* <Route path="/memberdata" component={ MemberDataTable } />
-              <Route path="/songdata" component={ SongDataTable } /> */}
               <Footer></Footer>
           </Router>
           
