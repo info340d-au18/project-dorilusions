@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/project-dorilusions/static/css/main.99819b91.chunk.css",
-    "main.js": "/project-dorilusions/static/js/main.dd02d73f.chunk.js",
-    "main.js.map": "/project-dorilusions/static/js/main.dd02d73f.chunk.js.map",
+    "main.js": "/project-dorilusions/static/js/main.3a321ff8.chunk.js",
+    "main.js.map": "/project-dorilusions/static/js/main.3a321ff8.chunk.js.map",
     "runtime-main.js": "/project-dorilusions/static/js/runtime-main.e1693a52.js",
     "runtime-main.js.map": "/project-dorilusions/static/js/runtime-main.e1693a52.js.map",
     "static/css/2.192f965c.chunk.css": "/project-dorilusions/static/css/2.192f965c.chunk.css",
-    "static/js/2.0b9f71ea.chunk.js": "/project-dorilusions/static/js/2.0b9f71ea.chunk.js",
-    "static/js/2.0b9f71ea.chunk.js.map": "/project-dorilusions/static/js/2.0b9f71ea.chunk.js.map",
+    "static/js/2.00f135db.chunk.js": "/project-dorilusions/static/js/2.00f135db.chunk.js",
+    "static/js/2.00f135db.chunk.js.map": "/project-dorilusions/static/js/2.00f135db.chunk.js.map",
     "index.html": "/project-dorilusions/index.html",
-    "precache-manifest.ce59cd2c3d471697d7f899470e5a886c.js": "/project-dorilusions/precache-manifest.ce59cd2c3d471697d7f899470e5a886c.js",
+    "precache-manifest.ec46b685e921afb03bf7045091c2f03c.js": "/project-dorilusions/precache-manifest.ec46b685e921afb03bf7045091c2f03c.js",
     "service-worker.js": "/project-dorilusions/service-worker.js",
     "static/css/2.192f965c.chunk.css.map": "/project-dorilusions/static/css/2.192f965c.chunk.css.map",
     "static/css/main.99819b91.chunk.css.map": "/project-dorilusions/static/css/main.99819b91.chunk.css.map",
-    "static/js/2.0b9f71ea.chunk.js.LICENSE.txt": "/project-dorilusions/static/js/2.0b9f71ea.chunk.js.LICENSE.txt",
+    "static/js/2.00f135db.chunk.js.LICENSE.txt": "/project-dorilusions/static/js/2.00f135db.chunk.js.LICENSE.txt",
     "static/media/logo-new.png": "/project-dorilusions/static/media/logo-new.a38ced5a.png",
     "static/media/minidoka.jpg": "/project-dorilusions/static/media/minidoka.acc121ad.jpg",
     "static/media/nsudor.jpg": "/project-dorilusions/static/media/nsudor.a9e81771.jpg",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.e1693a52.js",
     "static/css/2.192f965c.chunk.css",
-    "static/js/2.0b9f71ea.chunk.js",
+    "static/js/2.00f135db.chunk.js",
     "static/css/main.99819b91.chunk.css",
-    "static/js/main.dd02d73f.chunk.js"
+    "static/js/main.3a321ff8.chunk.js"
   ]
 }
